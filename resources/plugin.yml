@@ -1,0 +1,191 @@
+name: technoEconomyPlus
+version: '${project.version}'
+main: com.techno.economy.TechnoEconomyPlus
+api-version: '1.20'
+description: A production-grade economy plugin with license and finance systems
+authors: [technodev]
+softdepend:
+  - Vault
+  - Essentials
+  - PlaceholderAPI
+commands:
+  balance:
+    description: Economy balance commands
+    usage: /balance [give|set|history] [player] [amount]
+    permission: technoeconomy.use
+  eco:
+    description: Admin economy controls
+    usage: /eco <give|take|set|reset|backup|reload> [player] [amount]
+    permission: technoeconomy.admin
+  pay:
+    description: Pay another player
+    usage: /pay <player> <amount>
+    permission: technoeconomy.pay
+  baltop:
+    description: View top player balances
+    usage: /baltop [page]
+    permission: technoeconomy.use
+  bank:
+    description: Personal bank account commands
+    usage: /bank [deposit|withdraw|interest] [amount]
+    permission: technoeconomy.use
+  daily:
+    description: Claim your daily reward
+    usage: /daily
+    permission: technoeconomy.use
+  bounty:
+    description: Place and list player bounties
+    usage: /bounty [player|list] [amount]
+    permission: technoeconomy.use
+  jobs:
+    description: Join and view jobs
+    usage: /jobs [join] [job]
+    permission: technoeconomy.use
+  casino:
+    description: Open casino GUI, play slots or view history
+    usage: /casino [history]
+    permission: technoeconomy.use
+  coinflip:
+    description: Play coinflip
+    usage: /coinflip <bet> <heads|tails>
+    permission: technoeconomy.use
+  lottery:
+    description: Server lottery
+    usage: /lottery [buy] [tickets]
+    permission: technoeconomy.use
+  worth:
+    description: Check the buy and sell value of an item
+    usage: /worth [item]
+    permission: technoeconomy.use
+  sell:
+    description: Sell items from your inventory
+    usage: /sell <hand|all> [amount]
+    permission: technoeconomy.use
+  sellwand:
+    description: Give a sellwand to a player
+    usage: /sellwand give <player> <uses>
+    permission: technoeconomy.admin
+  market:
+    description: Open the GUI market
+    usage: /market [category] [page]
+    permission: technoeconomy.use
+  shop:
+    description: Open the admin shop
+    usage: /shop
+    permission: technoeconomy.use
+  ah:
+    description: Open or list on the auction house
+    usage: /ah [sell] [price]
+    permission: technoeconomy.use
+  chestshop:
+    description: Create a chest shop
+    usage: /chestshop create <price>
+    permission: technoeconomy.use
+  payday:
+    description: Claim scheduled salary
+    usage: /payday
+    permission: technoeconomy.use
+  trash:
+    description: Open the trash can GUI
+    aliases: [cop]
+    usage: /trash
+    permission: technoeconomy.use
+  hud:
+    description: Toggle the global actionbar HUD for all players (Admin only)
+    usage: /hud [on|off|toggle]
+    permission: technoeconomy.admin
+  technoeconomyplus:
+    description: Main TechnoEconomyPlus command
+    aliases: [tep]
+    usage: /technoeconomyplus [help|reload|license]
+  stock:
+    description: Stock market and share trading
+    aliases: [borsa]
+    usage: /stock [portfolio|buy|sell]
+    permission: technoeconomy.stock
+  company:
+    description: Company management and tax system
+    aliases: [sirket]
+    usage: /company [create|info|hire|fire|deposit|withdraw|paytax]
+    permission: technoeconomy.company
+  check:
+    description: Bank check writing and redemption
+    aliases: [cek]
+    usage: /check [write] <amount>
+    permission: technoeconomy.check
+  duel:
+    description: Wager-based 1v1 dueling system
+    aliases: [duello]
+    usage: /duel <player> <amount> [pvp|coinflip]
+    permission: technoeconomy.duel
+  clan:
+    description: Complete clan system
+    aliases: [klan, c]
+    usage: /clan
+    permission: technoeconomy.clan
+  clanadmin:
+    description: Clan administration commands
+    aliases: [klanadmin, ca]
+    usage: /clanadmin
+    permission: technoeconomy.clan.admin
+permissions:
+  technoeconomy.use:
+    description: Allows using basic economy commands
+    default: true
+  technoeconomy.pay:
+    description: Allows using /pay
+    default: true
+  technoeconomy.admin:
+    description: Allows admin economy commands
+    default: op
+  technoeconomy.borsa:
+    description: Allows using /borsa (stock market)
+    default: true
+  technoeconomy.borsa.admin:
+    description: Allows admin borsa commands
+    default: op
+  technoeconomy.stock:
+    description: Allows using /stock command
+    default: true
+  technoeconomy.sirket:
+    description: Allows using /sirket (company)
+    default: true
+  technoeconomy.sirket.admin:
+    description: Allows admin sirket commands
+    default: op
+  technoeconomy.company:
+    description: Allows using /company command
+    default: true
+  technoeconomy.company.admin:
+    description: Allows admin company commands
+    default: op
+  technoeconomy.cek:
+    description: Allows using /cek (check)
+    default: true
+  technoeconomy.cek.admin:
+    description: Allows admin cek commands
+    default: op
+  technoeconomy.check:
+    description: Allows using /check command
+    default: true
+  technoeconomy.check.admin:
+    description: Allows admin check commands
+    default: op
+  technoeconomy.duello:
+    description: Allows using /duello (duel)
+    default: true
+  technoeconomy.duello.admin:
+    description: Allows admin duello commands
+    default: op
+  technoeconomy.duel:
+    description: Allows using /duel command
+    default: true
+  technoeconomy.duel.admin:
+    description: Allows admin duel commands
+    default: op
+  technoeconomy.clan:
+    description: Allows using clan commands
+    default: true
+  technoeconomy.clan.admin:
+    description: Allows clan administration commands
+    default: op

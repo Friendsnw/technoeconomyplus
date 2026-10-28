@@ -1,0 +1,575 @@
+prefix: '&bᴛᴇᴄʜɴᴏᴇᴄᴏɴᴏᴍʏ&6ᴘʟᴜꜱ &7» &r'
+messages:
+  balance: '&aVotre solde: &e{symbol}{amount}'
+  balance-other: '&aSolde de {player}: &e{symbol}{amount}'
+  balance-given: '&aVous avez donné &e{symbol}{amount} &aà {player}.'
+  balance-set: '&aLe solde de {player} a été défini à &e{symbol}{amount}&a.'
+  no-permission: '&cVous n''avez pas la permission d''utiliser cette commande.'
+  player-not-found: '&cJoueur introuvable: &e{player}'
+  invalid-amount: '&cMontant invalide: &e{amount}'
+  invalid-usage: '&cUtilisation incorrecte: &e{usage}'
+  players-only: '&cCette commande ne peut être utilisée que par des joueurs.'
+  license-invalid: '&cVotre licence est invalide ou expirée.'
+  license-feature-locked: '&cVous devez mettre à niveau votre licence pour utiliser
+    cette fonctionnalité.'
+  package-upgrade-needed: '&cVous devez mettre à niveau votre licence pour utiliser
+    cette fonctionnalité.'
+  version-check-failed: '&cVotre version de Java ou Minecraft est obsolète. Minecraft
+    1.20+ et Java 17+ requis.'
+  eco-usage: '&eUtilisation: /eco <give|take|set|reset|backup|reload> [joueur] [montant]'
+  eco-taken: '&aRetiré avec succès &e{symbol}{amount} &aà {player}.'
+  eco-reset: '&aLe solde de {player} a été réinitialisé à: &e{symbol}{amount}&a.'
+  eco-backup-starting: '&eSauvegarde en cours, veuillez patienter...'
+  eco-backup-success: '&aSauvegarde terminée avec succès.'
+  eco-backup-failed: '&cÉchec de la sauvegarde. Vérifiez la console.'
+  eco-reload-success: '&aConfiguration et fichiers de langue rechargés.'
+  corrupt-file-restored: '&eLa base de données était corrompue et a été restaurée
+    à partir de la sauvegarde la plus récente.'
+  insufficient-funds: '&cVous n''avez pas assez d''argent pour cela!'
+  pay-self: '&cVous ne pouvez pas vous envoyer de l''argent!'
+  pay-sent: '&aEnvoyé &e{symbol}{amount} &aà {player} &7(Taxe: &e{symbol}{tax}&7).'
+  pay-received: '&aReçu &e{symbol}{amount} &ade {player}.'
+  baltop-header: '&6&m---&r &e&lJoueurs les plus riches &7(Page {page}/{total}) &6&m---'
+  baltop-entry: '&e#{rank} &f{player}&7: &a{amount}'
+  history-header: '&6&m---&r &e&lTransactions Récentes &6&m---'
+  history-empty: '&7Vous n''avez encore aucune transaction.'
+  bank-balance: '&aVotre solde bancaire: &e{symbol}{amount}'
+  bank-usage: '&7Utilisation: &e/bank deposit <montant>&7, &e/bank withdraw <montant>&7
+    ou &e/bank interest'
+  bank-interest-info: '&aProchain versement d''intérêts dans &e{minutes} minutes &7(&a+%{rate}&7).'
+  bank-deposit-success: '&aDéposé avec succès &e{symbol}{amount} &adans votre banque.'
+  bank-withdraw-success: '&aRetiré avec succès &e{symbol}{amount} &ade votre banque.'
+  bank-insufficient: '&cVous n''avez pas assez sur votre compte bancaire!'
+  daily-already-claimed: '&cVous avez déjà réclamé votre récompense aujourd''hui!
+    Revenez demain.'
+  daily-claimed: '&aRécompense quotidienne réclamée: &e{symbol}{amount}&a! Série:
+    &6{streak} jours&a.'
+  bounty-list-header: '&6&m---&r &c&lPrimes Actives &6&m---'
+  bounty-list-empty: '&7Il n''y a actuellement aucune prime active.'
+  bounty-self: '&cVous ne pouvez pas placer de prime sur vous-même!'
+  bounty-broadcast: '&c&l[PRIME] &e{player} &7a placé une prime de &a{symbol}{amount}
+    &7sur &c{target}&7!'
+  bounty-claimed: '&6&l[PRIME] &c{target} &aa été tué et une prime de &e{amount} &aa
+    été réclamée!'
+  bounty-usage: '&7Utilisation: &e/bounty <joueur> <montant> &7ou &e/bounty list'
+  jobs-current: '&aVotre métier actuel: &e{job}'
+  jobs-usage: '&7Utilisation: &e/jobs join <miner|farmer|hunter|builder|none>'
+  jobs-invalid: '&cMétier invalide: &e{job}'
+  jobs-joined: '&aVous avez rejoint le métier: &e{job}'
+  slots-usage: '&7Utilisation: &e/casino slots <mise>'
+  slots-win: '&a&lJACKPOT! &aVous avez gagné: &e{symbol}{amount}&a!'
+  slots-lose: '&cVous avez perdu votre mise. Plus de chance la prochaine fois!'
+  coinflip-usage: '&7Utilisation: &e/coinflip <mise> <pile|face>'
+  coinflip-win: '&aLa pièce est tombée sur &e{result}&a! Vous avez gagné: &e{symbol}{amount}&a!'
+  coinflip-lose: '&aLa pièce est tombée sur &e{result}&a. Vous avez perdu votre mise!'
+  lottery-info: '&6&lTechnoLottery &7| Cagnotte: &a{pot} &7| Total Tickets: &e{tickets}
+    &7| Prix: &e{price} &7| Tirage: &b{minutes}m'
+  lottery-my-tickets: '&7Vous avez &e{count} &7tickets pour ce tirage.'
+  lottery-bought: '&aAcheté &e{count} &7tickets pour &e{cost}&a!'
+  lottery-usage: '&7Utilisation: &e/lottery &7ou &e/lottery buy <montant>'
+  lottery-winner-broadcast: '&6&l[LOTERIE] &e{player} &aa remporté le grand prix de
+    &e{symbol}{amount}&a!'
+  worth-no-item: '&cVous devez tenir un objet ou spécifier un nom d''objet!'
+  invalid-item: '&cObjet Minecraft invalide!'
+  worth-info: '&7Objet: &f{item} &7| Achat: &a{buy} &7| Vente: &e{sell}'
+  worth-not-sellable: Non Vendant
+  sell-usage: '&7Utilisation: &e/sell hand [montant] &7ou &e/sell all'
+  sell-not-sellable: '&cCet objet ne peut pas être vendu!'
+  sell-none-found: '&cAucun objet vendable trouvé dans votre inventaire!'
+  sell-success: '&aVendu avec succès &e{count}x objets &apour &e{amount}&a!'
+  sellwand-given: '&aDonné une baguette de vente ({uses} utilisations) à {player}.'
+  sellwand-empty: '&7Aucun objet vendable dans ce conteneur!'
+  sellwand-success: '&aVendu avec succès &e{count}x objets &apour &e{amount}&a!'
+  sellwand-broken: '&cVotre baguette de vente s''est brisée!'
+  sell-unsellable-items: '&cCes objets ne peuvent pas être vendus: &f{items}&c.'
+  sell-nothing-to-sell: '&cIl n''y a aucun objet à vendre dans la fenêtre.'
+  sell-all-success: '&aVous avez vendu &f{count}&a objets pour un total de &f{amount}&a!'
+  market-admin-usage: '&7Utilisation: &e/market admin <add|remove> <id> [mat] [buy]
+    [sell] [category]'
+  market-admin-added: '&aObjet ajouté au marché: &e{item}'
+  market-admin-removed: '&aObjet retiré du marché: &e{item}'
+  market-admin-not-found: '&cObjet introuvable dans le marché!'
+  market-buy-success: '&aAcheté 1x &e{item} &apour &e{symbol}{price}&a!'
+  market-sell-success: '&aVendu 1x &e{item} &apour &e{symbol}{price}&a!'
+  market-no-items: '&cVous n''avez pas cet objet dans votre inventaire!'
+  ah-sell-usage: '&7Tenez un objet et utilisez &e/ah sell <prix>'
+  ah-listed: '&aMis en vente {item} pour &e{symbol}{price}&a!'
+  ah-cant-buy-own: '&cVous ne pouvez pas acheter votre propre vente aux enchères!'
+  ah-bought: '&aAcheté {item} pour &e{symbol}{price}&a!'
+  ah-bid-placed: '&aEnchère placée de &e{symbol}{amount}&a!'
+  ah-expired-returned: '&eVotre objet expiré a été remis dans votre inventaire.'
+  chestshop-usage: '&7Regardez un coffre et utilisez &e/chestshop create <prix>'
+  chestshop-look-at-chest: '&cVous devez regarder directement un coffre ou un baril!'
+  chestshop-created: '&aBoutique coffre créée! Prix par unité: &e{symbol}{price}'
+  chestshop-empty: '&cCette boutique est en rupture de stock!'
+  chestshop-purchased: '&aAcheté 1x &e{item} &apour &e{price}&a!'
+  chestshop-sold-notify: '&aUn joueur a acheté 1x &e{item} &adans votre boutique:
+    &e{price}&a!'
+  payday-claimed: '&aSalaire réclamé: &e{amount}&a!'
+  stock-no-shares: '&7Vous ne possédez aucune action.'
+  stock-portfolio-header: '&6&m---&r &e&lPortefeuille d''Actions &6&m---'
+  stock-portfolio-total: '&7Valeur Totale du Portefeuille: &e{total}$'
+  stock-portfolio-pl: '&7Profit / Perte: {color}{pl}$'
+  stock-portfolio-entry: '&8» &e{company} &7- &f{amount} actions &8(&a{price}$/action&8)'
+  stock-buy-usage: '&cUtilisation: /stock buy <entreprise> <quantité>'
+  stock-buy-invalid-amount: '&cQuantité d''actions invalide!'
+  stock-buy-success: '&aAcheté {amount} actions de {company}!'
+  stock-buy-failed: '&cÉchec de l''achat! Solde insuffisant ou entreprise invalide.'
+  stock-sell-usage: '&cUtilisation: /stock sell <entreprise> <quantité>'
+  stock-sell-success: '&aVendu {amount} actions de {company}!'
+  stock-sell-failed: '&cÉchec de la vente! Vous ne possédez pas assez d''actions.'
+  company-create-usage: '&cUtilisation: /company create <nom_entreprise>'
+  company-created: '&aEntreprise {name} créée avec succès!'
+  company-create-failed: '&cÉchec de création! Fonds insuffisants, nom invalide ou
+    déjà propriétaire.'
+  company-not-found: '&cEntreprise introuvable!'
+  company-none-owned: '&cVous ne possédez aucune entreprise!'
+  company-details-header: '&6&m---&r &e&lDétails de l''Entreprise: {name} &6&m---'
+  company-owner: '&7Propriétaire: &f{owner}'
+  company-vault: '&7Coffre d''Entreprise: &a{balance}$'
+  company-tax-debt: '&7Dette Fiscale: &c{debt}$'
+  company-market-cap: '&7Capitalisation: &e{cap}$'
+  company-share-price: '&7Prix de l''Action: &b{price}$'
+  company-workers-count: '&7Employés: &f{count}'
+  company-hire-usage: '&cUtilisation: /company hire <joueur> <salaire>'
+  company-hire-success: '&aEmployé {player} recruté avec un salaire de {salary}$!'
+  company-hired-notice: '&aVous avez été embauché par {company}! Salaire: {salary}$'
+  company-hire-failed: '&cÉchec du recrutement!'
+  company-fire-usage: '&cUtilisation: /company fire <joueur>'
+  company-fire-success: '&aEmployé renvoyé avec succès.'
+  company-fire-failed: '&cÉchec du renvoi de l''employé.'
+  company-deposit-usage: '&cUtilisation: /company deposit <montant>'
+  company-deposited: '&aDéposé {amount}$ dans le coffre d''entreprise!'
+  company-withdraw-usage: '&cUtilisation: /company withdraw <montant>'
+  company-withdrawn: '&aRetiré {amount}$ du coffre d''entreprise!'
+  company-insufficient-vault: '&cFonds insuffisants dans le coffre de l''entreprise!'
+  company-no-tax-debt: '&aVotre entreprise n''a aucune dette fiscale.'
+  company-tax-paid: '&aPayé {amount}$ pour la dette fiscale!'
+  company-tax-pay-failed: '&cÉchec du paiement! Fonds insuffisants dans le coffre.'
+  check-write-usage: '&cUtilisation: /check write <montant>'
+  check-inventory-full: '&cVotre inventaire est plein!'
+  check-created: '&aChèque de {amount}$ créé avec succès!'
+  check-create-failed: '&cÉchec de création du chèque! Fonds insuffisants.'
+  check-redeemed: '&aChèque encaissé et crédité sur votre compte!'
+  check-invalid: '&cCe chèque est invalide ou déjà encaissé!'
+  check-item-name: '&6&lCHÈQUE BANCAIRE &7(&e{amount}$&7)'
+  check-item-lore-amount: '&7Montant: &a{amount}$'
+  check-item-lore-issuer: '&7Émetteur: &f{issuer}'
+  check-item-lore-date: '&7Date: &f{date}'
+  check-item-lore-click: '&eClic droit pour encaisser sur votre compte!'
+  check-write-prompt: '&eVeuillez entrer le montant du chèque:'
+  check-write-cancel: '&cCréation du chèque annulée.'
+  duel-offer-header: '&6&m---&r &e&lOFFRE DE DUEL: {player} &6&m---'
+  duel-offer-wager: '&7Mise: &a{amount}$'
+  duel-offer-type: '&7Type de Duel: &f{type}'
+  duel-offer-accept-hint: '&ePour accepter: &a/duel accept {player}'
+  duel-accept-usage: '&cUtilisation: /duel accept <joueur>'
+  duel-accept-failed: '&cImpossible d''accepter le duel! Offre expirée ou solde insuffisant.'
+  duel-started: '&c&lDUEL COMMENCÉ! &7Que le meilleur gagne!'
+  duel-won: '&a&lVOUS AVEZ GAGNÉ LE DUEL! &e{prize}$ crédités sur votre compte.'
+  duel-lost: '&c&lVOUS AVEZ PERDU LE DUEL! &7Vous avez perdu {amount}$.'
+  duel-stats-header: '&6&m---&r &e&lVos Statistiques de Duel &6&m---'
+  duel-stats-wins: '&7Victoires: &a{wins}'
+  duel-stats-losses: '&7Défaites: &c{losses}'
+  duel-stats-winnings: '&7Gains Totaux: &e{total}$'
+  duel-offer-sent: '&aOffre de duel {type} de {amount}$ envoyée à {target}!'
+  duel-offer-failed: '&cÉchec de l''envoi de l''offre! Solde insuffisant ou cible
+    invalide.'
+  duel-invalid-wager: '&cMontant de mise invalide!'
+  feature-disabled: '&cCette fonctionnalité est actuellement désactivée.'
+  hud-enabled: '&aAffichage HUD activé.'
+  hud-disabled: '&cAffichage HUD désactivé.'
+  hud-already-on: '&eAffichage HUD est déjà activé.'
+  hud-already-off: '&eAffichage HUD est déjà désactivé.'
+  hud-usage: '&cUtilisation: /hud [toggle|on|off]'
+  trash-opened: '&7Poubelle ouverte.'
+  command-disabled: '&cCette commande est actuellement désactivée sur ce serveur.'
+  payday-cooldown: '&cVous devez attendre &e{time} &cavant votre prochaine paie.'
+  hud-global-enabled: '&aAffichage HUD global activé pour tous les joueurs.'
+  hud-global-disabled: '&cAffichage HUD global désactivé pour tous les joueurs.'
+  chestshop-break-denied: '&cVous ne pouvez pas casser la boutique d''un autre joueur!'
+  chestshop-removed: '&aBoutique coffre supprimée avec succès.'
+  chestshop-sneak-required: '&eShift + Clic Droit pour interagir avec cette boutique!'
+  chestshop-price-updated: '&aPrix de la boutique mis à jour à &e${price}&a!'
+  chestshop-name-empty: '&cLe nom du marché ne peut pas être vide.'
+  chestshop-created-no-item: '&aBoutique créée! Aucun produit en main. Utilisez le
+    menu de gestion pour ajouter des produits.'
+  chestshop-creation-cancelled: '&cCréation de la boutique annulée.'
+  chestshop-product-added: '&aProduit &f{item} &aajouté avec le prix &e${price}&a!'
+  clan-disabled: '&cLe système de clan est actuellement désactivé.'
+  clan-not-in-clan: '&cVous ne faites partie d''aucun clan.'
+  clan-player-not-in-clan: '&cCe joueur n''appartient à aucun clan.'
+  clan-player-not-online: '&cCe joueur n''est pas en ligne.'
+  clan-not-found: '&cClan introuvable.'
+  clan-no-permission: '&cVous n''avez pas la permission d''effectuer cette action
+    de clan.'
+  clan-already-in-clan: '&cVous êtes déjà membre d''un clan.'
+  clan-already-exists: '&cUn clan avec ce nom existe déjà.'
+  clan-tag-already-exists: '&cUn clan avec ce tag existe déjà.'
+  clan-name-too-short: '&cNom de clan trop court (min. {min} caractères).'
+  clan-name-too-long: '&cNom de clan trop long (max. {max} caractères).'
+  clan-tag-too-short: '&cTag de clan trop court (min. {min} caractères).'
+  clan-tag-too-long: '&cTag de clan trop long (max. {max} caractères).'
+  clan-name-blacklisted: '&cCe nom de clan contient des mots interdits.'
+  clan-tag-blacklisted: '&cCe tag de clan contient des mots interdits.'
+  clan-create-cooldown: '&cVous devez attendre {seconds} secondes avant de créer un
+    autre clan.'
+  clan-create-insufficient-funds: '&cVous avez besoin de {cost} pour créer un clan.'
+  clan-created: '&aClan &6{clan} &7[{tag}&7] &acréé avec succès!'
+  clan-created-broadcast: '&6{player} &ea fondé un nouveau clan: &6{clan} &7[{tag}&7]!'
+  clan-disbanded: '&cLe clan &6{clan} &ca été dissous.'
+  clan-disband-confirm: '&cTapez &e/clan disband confirm &cpour supprimer définitivement
+    votre clan.'
+  clan-invite-sent: '&aInvitation envoyée à &e{player}&a.'
+  clan-invite-received: '&eVous avez été invité à rejoindre le clan &6{clan}&e! Utilisez
+    &a/clan accept {clan} &eou &c/clan deny {clan}&e.'
+  clan-invite-limit-reached: '&cNombre maximum d''invitations en attente atteint.'
+  clan-invite-timeout: '&cL''invitation à &e{player} &ca expiré.'
+  clan-invite-no-pending: '&cVous n''avez aucune invitation en attente de ce clan.'
+  clan-joined: '&aVous avez rejoint le clan &6{clan}&a!'
+  clan-member-joined: '&a{player} a rejoint le clan!'
+  clan-invite-denied: '&cVous avez refusé l''invitation de &6{clan}&c.'
+  clan-invite-denied-notify: '&e{player} a refusé l''invitation du clan.'
+  clan-kicked: '&cVous avez été expulsé de &6{clan}&c.'
+  clan-member-kicked: '&c{player} a été expulsé du clan par {actor}.'
+  clan-cannot-kick-rank: '&cVous ne pouvez pas expulser quelqu''un de rang égal ou
+    supérieur.'
+  clan-promoted: '&aVous avez été promu &e{rank}&a!'
+  clan-member-promoted: '&a{player} a été promu &e{rank}&a.'
+  clan-max-rank-reached: '&cCe membre a déjà le rang le plus élevé.'
+  clan-cannot-promote-rank: '&cVous ne pouvez pas promouvoir quelqu''un à votre rang
+    ou supérieur.'
+  clan-demoted: '&cVous avez été rétrogradé à &e{rank}&c.'
+  clan-member-demoted: '&c{player} a été rétrogradé à &e{rank}&c.'
+  clan-min-rank-reached: '&cCe membre a déjà le rang le plus bas.'
+  clan-cannot-demote-rank: '&cVous ne pouvez pas rétrograder quelqu''un de rang égal
+    ou supérieur.'
+  clan-ownership-transferred: '&6Direction du clan transférée à &e{player}&6!'
+  clan-new-leader-broadcast: '&6{player} est maintenant le nouveau chef de &6{clan}&6!'
+  clan-cannot-transfer-self: '&cVous êtes déjà le chef.'
+  clan-left: '&cVous avez quitté le clan.'
+  clan-member-left: '&c{player} a quitté le clan.'
+  clan-leader-cannot-leave: '&cLes chefs ne peuvent pas quitter le clan. Transférez
+    la direction ou dissolvez le clan.'
+  clan-home-set: '&aBase de clan définie à votre emplacement actuel.'
+  clan-home-not-set: '&cLa base de clan n''a pas encore été définie.'
+  clan-home-cooldown: '&cVous devez attendre {seconds} secondes avant de téléporter
+    à nouveau.'
+  clan-teleport-warmup: '&aTéléportation dans &e{seconds} &asecondes. Ne bougez pas
+    et ne prenez pas de dégâts!'
+  clan-teleport-cancelled-move: '&cTéléportation annulée car vous avez bougé.'
+  clan-teleport-cancelled-damage: '&cTéléportation annulée car vous avez subi des
+    dégâts.'
+  clan-teleport-success: '&aTéléporté à la base du clan.'
+  clan-base-set: '&aBase de clan &b{base} &adéfinie à votre emplacement actuel.'
+  clan-base-not-found: '&cBase de clan &e{base} &cn''existe pas.'
+  clan-max-bases-reached: '&cNombre maximum de bases de clan ({max}) atteint.'
+  clan-bank-deposit-success: '&a{amount} &adéposé dans la banque du clan (Taxe: &c{tax}&a).'
+  clan-bank-deposit-broadcast: '&e{player} &aa déposé &e{amount} &adans le coffre
+    du clan.'
+  clan-bank-deposit-insufficient-funds: '&cVous n''avez pas assez d''argent dans votre
+    portefeuille.'
+  clan-bank-limit-reached: '&cCapacité de la banque du clan atteinte ({limit}).'
+  clan-bank-withdraw-success: '&a{amount} &aretiré de la banque du clan.'
+  clan-bank-withdraw-broadcast: '&e{player} &aa retiré &e{amount} &adu coffre du clan.'
+  clan-bank-withdraw-insufficient-funds: '&cLa banque du clan n''a pas assez de fonds.'
+  clan-bank-withdraw-no-permission: '&cVotre rang ne permet pas de retirer de la banque
+    du clan.'
+  clan-ally-request-sent: '&aDemande d''alliance envoyée à &6{clan}&a.'
+  clan-ally-request-received: '&eLe clan &6{clan} &ea demandé une alliance! Utilisez
+    &a/clan ally {clan} &epour accepter.'
+  clan-ally-established: '&aAlliance établie avec succès avec &6{clan}&a!'
+  clan-ally-removed: '&cAlliance avec &6{clan} &cdissoute.'
+  clan-ally-limit-reached: '&cLe clan a atteint le nombre maximum d''alliés ({max}).'
+  clan-already-allied: '&cVous êtes déjà allié à ce clan.'
+  clan-cannot-ally-enemy: '&cImpossible de s''allier avec un clan ennemi.'
+  clan-enemy-declared: '&c&6{clan} &cdéclaré clan ennemi!'
+  clan-enemy-removed: '&aStatut ennemi de &6{clan} &arévoqué.'
+  clan-enemy-limit-reached: '&cNombre maximum d''ennemis de clan atteint.'
+  clan-already-enemies: '&cVous êtes déjà ennemis avec ce clan.'
+  clan-cannot-enemy-ally: '&cImpossible de déclarer la guerre à un clan allié.'
+  clan-war-declared-challenger: '&cDéclaration de guerre de clan envoyée à &6{clan}&c!'
+  clan-war-declared-target: '&4Le clan &6{clan} &4vous a déclaré la guerre! Utilisez
+    &c/clan war accept &4pour accepter.'
+  clan-war-accepted: '&4&lLA GUERRE COMMENCE! &cGuerre de clan contre &6{clan} &ccommencée!
+    Durée: {duration} minutes.'
+  clan-war-declined: '&eChallenge de guerre avec &6{clan} &erefusé.'
+  clan-war-no-pending: '&cAucun défi de guerre en attente de ce clan.'
+  clan-war-already-active: '&cUne guerre est déjà active pour ce clan.'
+  clan-war-min-members: '&cLes deux clans doivent avoir au moins {min} membres en
+    ligne pour commencer une guerre.'
+  clan-war-cooldown: '&cVotre clan est en temps de recharge de guerre pour encore
+    {hours} heures.'
+  clan-war-won: '&a&lVICTOIRE! &aVotre clan a gagné la guerre contre &6{clan}&a! Récompense:
+    &e{reward}'
+  clan-war-lost: '&c&lDÉFAITE! &cVotre clan a perdu la guerre contre &6{clan}&c. Pénalité:
+    &e{penalty}'
+  clan-war-kill: '&a+1 Kill de Guerre! &7({player} a éliminé {victim})'
+  clan-war-death: '&c-1 Mort de Guerre! &7({player} a été tué par {killer})'
+  clan-level-up: '&6&lNIVEAU DE CLAN! &eVotre clan est passé au niveau &b{level}&e!'
+  clan-friendly-fire-blocked: '&cLe tir allié entre membres du clan est désactivé.'
+  clan-ally-fire-blocked: '&cLe tir allié entre clans alliés est désactivé.'
+  clan-recruit-promoted: '&cFélicitations! Votre période de probation est terminée
+    et vous avez été promu MEMBRE.'
+  clan-daily-xp-reward: '&a+&e{xp} XP de Clan &apour l''activité quotidienne sur le
+    serveur!'
+  clan-create-usage: '&cUsage: /clan create <tag> <nom>'
+  clan-invite-usage: '&cUsage: /clan invite <joueur>'
+  clan-kick-usage: '&cUsage: /clan kick <joueur>'
+  clan-promote-usage: '&cUsage: /clan promote <joueur>'
+  clan-demote-usage: '&cUsage: /clan demote <joueur>'
+  clan-transfer-usage: '&cUsage: /clan transfer <joueur>'
+  clan-setbase-usage: '&cUsage: /clan setbase <nom>'
+  clan-base-usage: '&cUsage: /clan base <nom>'
+  clan-ally-usage: '&cUsage: /clan ally <clan>'
+  clan-unally-usage: '&cUsage: /clan unally <clan>'
+  clan-enemy-usage: '&cUsage: /clan enemy <clan>'
+  clan-unenemy-usage: '&cUsage: /clan unenemy <clan>'
+  clan-war-usage: '&cUsage: /clan war <declare|accept|deny> [clan]'
+  clan-bank-usage: '&cUsage: /clan bank <deposit|withdraw> <montant>'
+  clan-chat-usage: '&cUsage: /clan chat <message>'
+  clan-allychat-usage: '&cUsage: /clan allychat <message>'
+  clan-help-header: '&6==[ COMMANDES DU CLAN ]=='
+  clan-help-create: '&e/clan create <tag> <nom> &7- Créer un clan'
+  clan-help-invite: '&e/clan invite <joueur> &7- Inviter un joueur'
+  clan-help-members: '&e/clan kick|promote|demote <joueur> &7- Gestion des membres'
+  clan-help-bank: '&e/clan bank [deposit|withdraw] [montant] &7- Coffre du clan'
+  clan-help-war: '&e/clan war <declare|accept|deny> [clan] &7- Guerre de clan'
+  clan-help-bases: '&e/clan sethome|home|setbase|base &7- Points de repère'
+  clan-help-relations: '&e/clan ally|enemy <clan> &7- Diplomatie'
+  clan-info-header: '&6==[ INFO CLAN: &e{clan} &6]=='
+  clan-info-tag: '&7Tag: &e[{tag}]'
+  clan-info-leader: '&7Chef: &f{leader}'
+  clan-info-level: '&7Niveau: &b{level} &8({xp} XP)'
+  clan-info-members: '&7Membres: &a{count}&7/&2{max}'
+  clan-info-bank: '&7Coffre du Clan: &6{balance}'
+  clan-info-kdr: '&7KDR: &c{kills}&7/&4{deaths} &8(&f{kdr}&8)'
+  clan-info-allies: '&7Alliés: &a{allies}'
+  clanadmin-list-header: '&6==[ TOUS LES CLANS ({count}) ]=='
+  clanadmin-list-entry: '&7- &6{clan} &e[{tag}] &7(Niv {level}, {members} membres)'
+  clanadmin-info-header: '&6==[ ADMIN INFO CLAN: &e{clan} &6]=='
+  clanadmin-info-usage: '&cUsage: /clanadmin info <clan>'
+  clanadmin-delete-usage: '&cUsage: /clanadmin delete <clan>'
+  clanadmin-deleted: '&aClan &6{clan} &adéfinitivement supprimé.'
+  clanadmin-forcejoin-usage: '&cUsage: /clanadmin forcejoin <joueur> <clan>'
+  clanadmin-forcejoined: '&a{player} &aforcé à rejoindre &6{clan}&a.'
+  clanadmin-target-forcejoined: '&eUn administrateur vous a ajouté au clan &6{clan}&e.'
+  clanadmin-forceleave-usage: '&cUsage: /clanadmin forceleave <joueur>'
+  clanadmin-forceleft: '&a{player} &aforcé à quitter &6{clan}&a.'
+  clanadmin-cannot-forceleave-leader: '&cImpossible de retirer le chef du clan de
+    force.'
+  clanadmin-setlevel-usage: '&cUsage: /clanadmin setlevel <clan> <niveau>'
+  clanadmin-level-set: '&aNiveau du clan &6{clan} &adéfini à &b{level}&a.'
+  clanadmin-addxp-usage: '&cUsage: /clanadmin addxp <clan> <xp>'
+  clanadmin-xp-added: '&a&b{xp} XP &aajouté au clan &6{clan}&a.'
+  clanadmin-setbank-usage: '&cUsage: /clanadmin setbank <clan> <montant>'
+  clanadmin-bank-set: '&aSolde du coffre de &6{clan} &adéfini à &e{amount}&a.'
+  clanadmin-reloaded: '&aConfiguration et base de données du clan rechargées avec
+    succès.'
+  clanadmin-help-header: '&6==[ COMMANDES ADMIN CLAN ]=='
+  clanadmin-help-list: '&e/clanadmin list &7- Lister tous les clans'
+  clanadmin-help-info: '&e/clanadmin info <clan> &7- Voir les infos du clan'
+  clanadmin-help-delete: '&e/clanadmin delete <clan> &7- Supprimer un clan'
+  clanadmin-help-forcejoin: '&e/clanadmin forcejoin <joueur> <clan> &7- Forcer à rejoindre'
+  clanadmin-help-forceleave: '&e/clanadmin forceleave <joueur> &7- Forcer à quitter'
+  clanadmin-help-setlevel: '&e/clanadmin setlevel <clan> <niveau> &7- Définir le niveau'
+  clanadmin-help-addxp: '&e/clanadmin addxp <clan> <xp> &7- Ajouter des XP'
+  clanadmin-help-setbank: '&e/clanadmin setbank <clan> <montant> &7- Définir le coffre'
+  clanadmin-help-reload: '&e/clanadmin reload &7- Recharger la config'
+  clan-allied-broadcast: '&aVotre clan a formé une alliance avec &6{clan}&a!'
+  clan-already-allies: '&cVous êtes déjà allié avec &6{clan}&c.'
+  clan-already-in-war: '&cVotre clan est déjà en guerre active.'
+  clan-auto-promoted: '&aFélicitations! Vous avez été automatiquement promu &eMEMBER&a.'
+  clan-bank-deposited: '&aDéposé &e{amount} &adans la banque du clan (Net: &e{net}&a,
+    Taxe: &c{tax}&a).'
+  clan-bank-deposited-broadcast: '&e{player} &aa déposé &e{amount} &adans le coffre
+    du clan.'
+  clan-bank-insufficient-funds: '&cLe coffre du clan n''a pas assez de fonds.'
+  clan-bank-withdraw-no-rank: '&cVous devez être rang &e{rank} &cou plus pour retirer.'
+  clan-bank-withdrawn: '&aRetiré &e{amount} &ade la banque du clan.'
+  clan-bank-withdrawn-broadcast: '&e{player} &aa retiré &e{amount} &adu coffre du
+    clan.'
+  clan-base-limit-reached: '&cLimite de bases de clan atteinte ({max}).'
+  clan-base-set-success: '&aLa base de clan &e{base} &aa été définie à votre position.'
+  clan-base-teleported: '&aTéléporté à la base du clan.'
+  clan-base-teleporting: '&aTéléportation à la base dans &e{time}s&a. Ne bougez pas!'
+  clan-cannot-demote-higher: '&cVous ne pouvez pas rétrograder quelqu''un de rang
+    égal ou supérieur.'
+  clan-cannot-demote-lowest: '&cLe membre a déjà le rang le plus bas.'
+  clan-cannot-kick-higher: '&cVous ne pouvez pas expulser quelqu''un de rang égal
+    ou supérieur.'
+  clan-cannot-kick-leader: '&cVous ne pouvez pas expulser le chef du clan.'
+  clan-cannot-promote-equal: '&cVous ne pouvez pas promouvoir à votre rang ou supérieur.'
+  clan-cannot-promote-max: '&cLe membre a déjà le rang le plus élevé.'
+  clan-created-success: '&aClan &6{name} &7[{tag}&7] &acréé avec succès!'
+  clan-demoted-broadcast: '&c{player} &ea été rétrogradé du rang &e{rank}&e.'
+  clan-disbanded-broadcast: '&cLe clan &6{clan} &ca été dissous par le chef.'
+  clan-enemy-declared-broadcast: '&cLe clan &6{clan} &ca été déclaré comme ennemi!'
+  clan-home-set-success: '&aBase du clan définie à votre position actuelle.'
+  clan-home-teleported: '&aTéléporté à la base du clan.'
+  clan-home-teleporting: '&aTéléportation à la base du clan dans &e{time}s&a. Ne bougez
+    pas!'
+  clan-invalid-name-length: '&cLe nom du clan doit comporter entre {min} et {max}
+    caractères.'
+  clan-invalid-tag-length: '&cLe tag du clan doit comporter entre {min} et {max} caractères.'
+  clan-invite-max-pending: '&cLimite d''invitations en attente atteinte.'
+  clan-invite-none: '&cVous n''avez aucune invitation en attente.'
+  clan-kicked-broadcast: '&c{player} a été expulsé du clan par {actor}.'
+  clan-kicked-notice: '&cVous avez été expulsé de &6{clan}&c.'
+  clan-left-success: '&cVous avez quitté le clan &6{clan}&c.'
+  clan-level-up-broadcast: '&6&lNIVEAU DE CLAN SUPÉRIEUR! &eLe clan a atteint le niveau
+    &b{level}&e!'
+  clan-max-allies-reached: '&cLimite maximale d''alliés atteinte ({max}).'
+  clan-max-enemies-reached: '&cLimite maximale d''ennemis atteinte ({max}).'
+  clan-member-joined-broadcast: '&a{player} a rejoint le clan!'
+  clan-member-left-broadcast: '&e{player} a quitté le clan.'
+  clan-member-not-found: '&cMembre du clan introuvable.'
+  clan-members-limit-reached: '&cCapacité de membres du clan atteinte.'
+  clan-name-taken: '&cLe nom de clan &e{name} &cest déjà utilisé.'
+  clan-no-permission-rank: '&cVotre rang ne permet pas cette action.'
+  clan-only-leader-transfer: '&cSeul le chef peut transférer le clan.'
+  clan-promoted-broadcast: '&a{player} &ea été promu au rang &e{rank}&e!'
+  clan-tag-taken: '&cLe tag de clan &e{tag} &cest déjà utilisé.'
+  clan-target-already-in-clan: '&c{player} est déjà dans un clan.'
+  clan-teleport-cancelled: '&cTéléportation annulée (mouvement ou dégâts).'
+  clan-teleport-cooldown: '&cAttendez {time}s avant de vous téléporter à nouveau.'
+  clan-transferred-broadcast: '&6Chef de clan transféré de &e{old} &6à &e{new}&6!'
+  clan-unallied-broadcast: '&cL''alliance avec &6{clan} &ca pris fin.'
+  clan-unenemy-broadcast: '&aLe clan &6{clan} &cn''est plus un ennemi.'
+  clan-war-cancelled: '&eDéfi de guerre annulé.'
+  clan-war-declared-received: '&4Le clan &6{clan} &4a déclaré la guerre! Tapez &c/clan
+    war accept&4.'
+  clan-war-declared-sent: '&cDéfi de guerre envoyé à &6{clan}&c. En attente de réponse...'
+  clan-war-declined-other: '&eLe clan &6{clan} &ea refusé le défi de guerre.'
+  clan-war-draw-global: '&e&lÉGALITÉ! &7La guerre entre &6{clan1} &7et &6{clan2} &7s''est
+    terminée par une égalité!'
+  clan-war-ended-global: '&4&lGUERRE TERMINÉE! &6{winner} &aa battu &c{loser} &7({score1}
+    - {score2})!'
+  clan-war-kill-notify: '&c[GUERRE] &e{killer} &7a éliminé &e{victim}&7!'
+  clan-war-no-pending-offers: '&cAucun défi de guerre en attente.'
+  clan-war-started-global: '&4&lGUERRE DE CLANS! &6{clan1} &ccontre &6{clan2} &4a
+    commencé!'
+  stock-commodity-bought: '&aAcheté &f%amount%x %item% &apour &f$%price%&a!'
+  stock-commodity-sold: '&aVendu &f%amount%x %item% &apour &f$%price%&a!'
+  stock-no-items: '&cVous n''avez pas de %item% dans votre inventaire!'
+  bounty-tracking: '&aBoussole verrouillée sur &e%target%&a!'
+  bounty-target-offline: '&cLa cible est actuellement hors-ligne!'
+gui:
+  clan:
+    main:
+      title: '&8Clan: &6{clan}'
+  stock:
+    title: '&8&lBourse Techno &7- &fMarché Direct'
+    header-name: '&6&lBourse & Matières Premières'
+    header-lore1: '&7Marché dynamique des minerais & actions d''entreprises.'
+    header-lore2: '&eLes cours fluctuent selon l''offre et la demande.'
+    price-label: Cours du Marché
+    buy-click: 'Clic Gauche: Acheter 1x'
+    buy-shift: 'Shift-Gauche: Acheter 16x'
+    sell-click: 'Clic Droit: Vendre 1x'
+    sell-shift: 'Shift-Droit: Tout Vendre'
+    share-price: Prix de l'Action
+    available-shares: Actions Disponibles
+    owned-shares: Vos Actions
+    share-buy-1: 'Clic Gauche: Acheter 1 Action'
+    share-buy-10: 'Shift-Gauche: Acheter 10 Actions'
+    share-sell-1: 'Clic Droit: Vendre 1 Action'
+    share-sell-10: 'Shift-Droit: Vendre 10 Actions'
+    portfolio-name: '&a&lPortefeuille d''Investissement'
+    portfolio-value: Valeur du Portefeuille
+    portfolio-pl: Gains/Pertes
+    portfolio-click: Cliquer pour voir le résumé dans le tchat
+    close-name: '&c&lFermer le Menu'
+    refresh-name: '&e&lActualiser le Marché'
+    refresh-lore: Cliquer pour mettre à jour les cours
+  baltop:
+    podium-title: '&6&lTop Soldes &8- &ePodium'
+    podium-header: '&6&lClassement de Richesse'
+    podium-desc1: '&7Les plus riches sur le podium officiel.'
+    podium-desc2: '&eTravaillez et commercez pour atteindre la 1ère place!'
+    balance-label: Solde
+    first-place: 'Champion - #1 Joueur le Plus Riche'
+    second-place: 2ème Place - Deuxième Plus Riche
+    third-place: 3ème Place - Troisième Plus Riche
+    empty-slot: Marche Vide
+    pedestal: Marche du Podium
+    my-rank-title: '&e&lVotre Rang'
+    your-rank: Votre Rang
+    your-balance: Votre Solde
+    total-tracked: Joueurs Comptabilisés
+    unranked: Non Classé
+    all-rankings-name: '&a&lTout le Classement'
+    all-rankings-lore1: '&7Voir le classement paginé complet.'
+    all-rankings-lore2: '&eClassé du solde le plus élevé au plus bas.'
+    close-name: '&c&lFermer'
+    all-title: '&6&lTous les Soldes &8- &7Page %page%/%total%'
+    bank-label: Banque
+    clan-label: Clan
+    prev-page: '&e← Page Précédente'
+    back-podium-name: '&6&lRetour au Podium'
+    back-podium-lore: Cliquer pour revenir à la vue podium
+    next-page: '&ePage Suivante →'
+  admin:
+    title: '&c&lTechnoEconomy &8- &4Panneau d''Administration'
+    header-name: '&c&lCentre de Commandes Admin'
+    header-lore1: '&7Accès rapide à toutes les commandes.'
+    header-lore2: '&eCliquez pour déclencher une action ou voir les détails.'
+    cmd:
+      balance: Voir le solde du portefeuille.
+      pay: Transférer des fonds en sécurité.
+      bank: Comptes bancaires et intérêts.
+      baltop: Classement économique et podium.
+      check: Émettre et encaisser des chèques.
+      bounty: Primes et contrats de recherche.
+      market: Marché global par catégories.
+      shop: Boutique serveur dynamique.
+      ah: Hôtel des ventes des joueurs.
+      chestshop: Boutiques sur coffres physiques.
+      sell: Vente instantanée d'objets.
+      worth: Évaluation du prix des objets.
+      stock: Bourse et matières premières en direct.
+      company: Entreprises, employés et actions.
+      casino: Machines à sous et casino.
+      coinflip: Pile ou face avec 50% de chance.
+      lottery: Loterie du serveur.
+      duel: Duels avec mises.
+      clan: Clans, territoires et guerres.
+      clanadmin: Administration des clans.
+      daily: Récompenses quotidiennes.
+      payday: Salaire horaire.
+      jobs: Métiers et progression.
+      hud: Affichage de l'interface.
+      eco-give: Donner de l'argent.
+      eco-take: Retirer de l'argent.
+      eco-set: Définir le solde.
+      eco-reset: Réinitialiser le solde.
+    action:
+      click-view: Cliquer pour exécuter
+      command-only: Syntaxe de la commande
+      click-open: Cliquer pour ouvrir le menu
+      admin-only: Commande d'administration
+    reload-name: '&a&lRecharger le Plugin'
+    reload-lore: Recharger les fichiers de configuration et de langue
+    backup-name: '&e&lCréer une Sauvegarde'
+    backup-lore: Prendre une sauvegarde complète de la base de données
+    close-name: '&c&lFermer'
+    license-name: '&b&lVérification de Licence'
+    license-lore: Examiner l'état de la licence
+  bounty:
+    title: '&c&lPrimes Actives &8- &7Page %page%/%total%'
+    header-name: '&c&lTableau des Primes'
+    header-lore1: '&7Éliminez les cibles pour récupérer les primes.'
+    header-lore2: '&eCliquez sur les têtes pour suivre avec la boussole.'
+    empty-title: '&7Aucune Prime Active'
+    empty-desc: Il n'y a actuellement aucune prime sur les joueurs.
+    reward-label: Montant de la Prime
+    status-label: Statut de la Cible
+    click-track: Cliquer pour verrouiller la boussole!
+    prev-page: '&e← Page Précédente'
+    place-name: '&a&lPlacer une Prime'
+    place-lore1: '&7Commande pour placer une prime:'
+    place-lore2: '&e/bounty <joueur> <montant>'
+    close-name: '&c&lFermer'
+    refresh-name: '&e&lActualiser'
+    refresh-lore: Cliquer pour actualiser la liste
+    next-page: '&ePage Suivante →'

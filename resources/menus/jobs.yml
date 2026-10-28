@@ -1,0 +1,150 @@
+# ==[ TECHNOECONOMYPLUS - JOBS SELECTION MENU ]=====
+# EN: DeluxeMenus-style interface allowing players to browse available professions, view earnings, and join or leave jobs.
+# EN: Integrated with PlaceholderAPI (%technoeconomy_current_job%) and live profession switching.
+# TR: Oyuncuların meslekleri incelemesini, kazançları görmesini ve mesleklere katılıp ayrılmasını sağlayan DeluxeMenus arayüzü.
+# TR: PlaceholderAPI (%technoeconomy_current_job%) ve anlık meslek değişimi ile tam entegredir.
+# FR: Interface DeluxeMenus permettant aux joueurs de consulter les métiers, voir les gains et changer de profession.
+# FR: Intégration complète avec PlaceholderAPI (%technoeconomy_current_job%) et changement de métier en temps réel.
+# DE: DeluxeMenus-Interface zur Berufsübersicht, Verdienstansicht und zum Beitreten oder Verlassen von Berufen.
+# DE: Vollständig integriert mit PlaceholderAPI (%technoeconomy_current_job%) und Echtzeit-Berufswechsel.
+
+# EN: Title displayed at the top of the GUI inventory / TR: Menü başlığı / FR: Titre du menu / DE: Menütitel
+menu_title: "&8&l⚒ Jobs &7- &fCareer Center"
+
+# EN: Inventory size in slots (multiple of 9: 9, 18, 27, 36, 45, 54) / TR: Envanter boyutu / FR: Taille de l'inventaire / DE: Inventargröße
+size: 54
+
+items:
+  # ==[ BACKGROUND FILLER ]=====
+  # EN: Decorative border pane / TR: Dekoratif çerçeve camı / FR: Vitre décorative de bordure / DE: Dekorative Randglasscheibe
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [0,1,2,3,4,5,6,7,8,45,46,47,48,49,50,51,52,53]
+
+  # ==[ HEADER / CURRENT STATUS ]=====
+  # EN: Displays active job status via PlaceholderAPI / TR: PlaceholderAPI ile aktif meslek durumunu gösterir / FR: Affiche le statut du métier actif via PlaceholderAPI / DE: Zeigt den aktiven Berufsstatus über PlaceholderAPI an
+  header:
+    material: BOOK
+    display_name: "&6&l⚒ Career Center"
+    lore:
+      - "&7Choose your profession to earn money."
+      - "&7You receive rewards for job actions."
+      - ""
+      - "&eCurrent Job: &f%technoeconomy_current_job%"
+    slot: 4
+
+  # ==[ MINER PROFESSION ]=====
+  # EN: Join Miner profession / TR: Madenci mesleğine katıl / FR: Rejoindre le métier de Mineur / DE: Bergmann-Beruf beitreten
+  miner:
+    material: DIAMOND_PICKAXE
+    display_name: "&b&l⛏ Miner"
+    lore:
+      - "&7Break ores and stone to earn money."
+      - ""
+      - "&7⛏ Coal Ore: &f+$0.50"
+      - "&7⛏ Iron Ore: &f+$1.00"
+      - "&7⛏ Gold Ore: &f+$2.00"
+      - "&7⛏ Diamond Ore: &f+$5.00"
+      - "&7⛏ Ancient Debris: &f+$20.00"
+      - ""
+      - "&eClick to join!"
+    slot: 20
+    click_commands:
+      - "[player] jobs join miner"
+      - "[close]"
+
+  # ==[ FARMER PROFESSION ]=====
+  # EN: Join Farmer profession / TR: Çiftçi mesleğine katıl / FR: Rejoindre le métier de Fermier / DE: Bauer-Beruf beitreten
+  farmer:
+    material: HOE
+    display_name: "&a&l🌾 Farmer"
+    lore:
+      - "&7Harvest crops and plants to earn money."
+      - ""
+      - "&7🌾 Wheat / Carrot / Potato: &f+$0.50"
+      - "&7🌾 Melon / Pumpkin: &f+$0.80"
+      - "&7🌾 Sugar Cane: &f+$0.20"
+      - ""
+      - "&eClick to join!"
+    slot: 21
+    click_commands:
+      - "[player] jobs join farmer"
+      - "[close]"
+
+  # ==[ HUNTER PROFESSION ]=====
+  # EN: Join Hunter profession / TR: Avcı mesleğine katıl / FR: Rejoindre le métier de Chasseur / DE: Jäger-Beruf beitreten
+  hunter:
+    material: BOW
+    display_name: "&c&l⚔ Hunter"
+    lore:
+      - "&7Kill monsters to earn money."
+      - ""
+      - "&7⚔ Zombie / Skeleton: &f+$1.50"
+      - "&7⚔ Creeper: &f+$2.00"
+      - "&7⚔ Enderman: &f+$3.00"
+      - "&7⚔ Blaze: &f+$4.00"
+      - "&7⚔ Wither: &f+$50.00"
+      - ""
+      - "&eClick to join!"
+    slot: 22
+    click_commands:
+      - "[player] jobs join hunter"
+      - "[close]"
+
+  # ==[ BUILDER PROFESSION ]=====
+  # EN: Join Builder profession / TR: İnşaatçı mesleğine katıl / FR: Rejoindre le métier de Bâtisseur / DE: Baumeister-Beruf beitreten
+  builder:
+    material: BRICKS
+    display_name: "&e&l🧱 Builder"
+    lore:
+      - "&7Place blocks to earn money."
+      - ""
+      - "&7🧱 Per Block Placed: &f+$0.05"
+      - ""
+      - "&eClick to join!"
+    slot: 23
+    click_commands:
+      - "[player] jobs join builder"
+      - "[close]"
+
+  # ==[ FISHERMAN PROFESSION ]=====
+  # EN: Join Fisherman profession / TR: Balıkçı mesleğine katıl / FR: Rejoindre le métier de Pêcheur / DE: Angler-Beruf beitreten
+  fisherman:
+    material: FISHING_ROD
+    display_name: "&3&l🐟 Fisherman"
+    lore:
+      - "&7Catch fish to earn money."
+      - ""
+      - "&7🐟 Cod: &f+$0.50"
+      - "&7🐟 Salmon: &f+$0.80"
+      - "&7🐟 Tropical Fish: &f+$1.00"
+      - "&7🐟 Pufferfish: &f+$1.20"
+      - ""
+      - "&eClick to join!"
+    slot: 24
+    click_commands:
+      - "[player] jobs join fisherman"
+      - "[close]"
+
+  # ==[ LEAVE PROFESSION ]=====
+  # EN: Resign from active profession / TR: Aktif meslekten ayrıl / FR: Quitter le métier actuel / DE: Den aktuellen Beruf aufgeben
+  leave:
+    material: BARRIER
+    display_name: "&c&l✖ Leave Job"
+    lore:
+      - "&7Leave your current job."
+      - "&7Current: &f%technoeconomy_current_job%"
+    slot: 40
+    click_commands:
+      - "[player] jobs join none"
+      - "[close]"
+
+  # ==[ CLOSE BUTTON ]=====
+  # EN: Closes the jobs inventory / TR: Menüyü kapatır / FR: Ferme l'inventaire / DE: Schließt das Inventar
+  close:
+    material: OAK_DOOR
+    display_name: "&7← Close"
+    slot: 49
+    click_commands:
+      - "[close]"

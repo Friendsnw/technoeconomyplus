@@ -1,0 +1,115 @@
+# ==[ TECHNOECONOMYPLUS - CASINO & SLOTS MENU ]=====
+# EN: DeluxeMenus-style interface for the Casino slots machine, previous spin history, and total player win/loss records.
+# TR: Kasino slot makinesi, önceki çevirme geçmişi ve toplam kazanç/kayıp kayıtları için DeluxeMenus arayüzü.
+# FR: Interface DeluxeMenus pour la machine à sous du casino, l'historique des tirages et les bilans gains/pertes.
+# DE: DeluxeMenus-Interface für den Casino-Spielautomaten, Drehverlauf und Gesamtgewinn-/Verlustaufzeichnungen.
+
+# EN: Title displayed at the top of the GUI inventory / TR: Menü başlığı / FR: Titre du menu / DE: Menütitel
+menu_title: "&8&lCasino &7- &fSlot Arena"
+
+# EN: Inventory size in slots (multiple of 9: 9, 18, 27, 36, 45, 54) / TR: Envanter boyutu / FR: Taille de l'inventaire / DE: Inventargröße
+size: 45
+
+items:
+  # ==[ BACKGROUND FILLER ]=====
+  # EN: Decorative border pane / TR: Dekoratif çerçeve cam paneli / FR: Vitre décorative de bordure / DE: Dekorative Randglasscheibe
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44]
+
+  # ==[ HEADER / OVERVIEW ]=====
+  # EN: Casino overview and jackpot banner / TR: Kasino tanıtım ve büyük ikramiye başlığı / FR: Bannière de présentation et jackpot du casino / DE: Übersichtsbanner für Casino und Jackpot
+  header:
+    material: GOLD_BLOCK
+    display_name: "&6&l🎰 TechnoCasino Slots"
+    lore:
+      - "&7Spin the slot reels to win big cash prizes!"
+      - "&7Match 3 symbols for the grand jackpot."
+    slot: 4
+
+  # ==[ PLAYER STATS CARD ]=====
+  # EN: Player lifetime casino stats: total spins, total won, and total lost / TR: Oyuncunun toplam çevirme sayısı, toplam kazancı ve kaybı / FR: Statistiques du joueur : total tirages, gains et pertes / DE: Spielerstatistiken: Gesamtdrehs, Gewinne und Verluste
+  stats:
+    material: PLAYER_HEAD
+    display_name: "&e&lMy Casino Records"
+    lore:
+      - "&7Total Spins: &f%technoeconomy_casino_spins%"
+      - "&7Total Won: &a$%technoeconomy_casino_won%"
+      - "&7Total Lost: &c$%technoeconomy_casino_lost%"
+      - "&7Net Balance: &e$%technoeconomy_casino_net%"
+    slot: 19
+
+  # ==[ BET $50 ]=====
+  # EN: Quick spin with a $50 wager / TR: 50$ bahis ile hızlı çevirme / FR: Tirage rapide avec une mise de 50$ / DE: Schnelldreh mit 50$ Einsatz
+  bet_50:
+    material: LIME_DYE
+    display_name: "&a&lSpin: $50"
+    lore:
+      - "&7Wager &e$50 &7on the slot machine."
+      - ""
+      - "&eClick to spin!"
+    slot: 21
+    click_commands:
+      - "[player] casino slots 50"
+
+  # ==[ BET $100 ]=====
+  # EN: Quick spin with a $100 wager / TR: 100$ bahis ile hızlı çevirme / FR: Tirage rapide avec une mise de 100$ / DE: Schnelldreh mit 100$ Einsatz
+  bet_100:
+    material: EMERALD
+    display_name: "&a&lSpin: $100"
+    lore:
+      - "&7Wager &e$100 &7on the slot machine."
+      - ""
+      - "&eClick to spin!"
+    slot: 22
+    click_commands:
+      - "[player] casino slots 100"
+
+  # ==[ BET $500 ]=====
+  # EN: Quick spin with a $500 wager / TR: 500$ bahis ile hızlı çevirme / FR: Tirage rapide avec une mise de 500$ / DE: Schnelldreh mit 500$ Einsatz
+  bet_500:
+    material: DIAMOND
+    display_name: "&b&lSpin: $500"
+    lore:
+      - "&7Wager &e$500 &7on the slot machine."
+      - ""
+      - "&eClick to spin!"
+    slot: 23
+    click_commands:
+      - "[player] casino slots 500"
+
+  # ==[ CUSTOM BET SIGN INPUT ]=====
+  # EN: Enter custom wager amount via sign GUI / TR: Tabela üzerinden özel bahis miktarı belirleme / FR: Saisir une mise personnalisée via une pancarte / DE: Eigenen Einsatz über Schild eingeben
+  custom_bet:
+    material: WRITABLE_BOOK
+    display_name: "&6&lCustom Bet"
+    lore:
+      - "&7Enter any custom wager amount."
+      - ""
+      - "&eClick to type bet amount!"
+    slot: 24
+    click_commands:
+      - "[casino_custom_bet]"
+
+  # ==[ SPIN HISTORY ]=====
+  # EN: View previous spins log / TR: Önceki çevirme geçmişini görüntüle / FR: Consulter l'historique des tirages précédents / DE: Frühere Drehs im Verlauf ansehen
+  history:
+    material: BOOK
+    display_name: "&b&lSpin History"
+    lore:
+      - "&7View your recent slot spins and payouts."
+      - ""
+      - "&eClick to open history!"
+    slot: 25
+    click_commands:
+      - "[player] casino history"
+
+  # ==[ CLOSE BUTTON ]=====
+  # EN: Closes the casino inventory / TR: Menüyü kapatır / FR: Ferme l'inventaire / DE: Schließt das Inventar
+  close:
+    material: BARRIER
+    display_name: "&c&lClose"
+    slot: 31
+    click_commands:
+      - "[close]"

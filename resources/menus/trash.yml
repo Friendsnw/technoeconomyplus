@@ -1,0 +1,29 @@
+# ==[ TECHNOECONOMYPLUS - TRASH CAN MENU ]=====
+# EN: DeluxeMenus-style interface for item disposal (/trash). Any items left inside when closed are permanently removed.
+# TR: Eşya imha arayüzü (/trash). Menü kapatıldığında içeride bırakılan eşyalar kalıcı olarak silinir.
+# FR: Interface DeluxeMenus pour la poubelle (/trash). Les objets laissés à la fermeture sont définitivement supprimés.
+# DE: DeluxeMenus-Interface für den Mülleimer (/trash). Beim Schließen im Inventar verbleibende Gegenstände werden dauerhaft gelöscht.
+
+# EN: Title displayed at the top of the GUI inventory / TR: Menü başlığı / FR: Titre du menu / DE: Menütitel
+menu_title: "&8&l🗑 Trash Can"
+
+# EN: Inventory size in slots (multiple of 9: 9, 18, 27, 36, 45, 54) / TR: Envanter boyutu / FR: Taille de l'inventaire / DE: Inventargröße
+size: 54
+
+items:
+  # ==[ DISPOSAL BORDER PANE ]=====
+  # EN: Decorative perimeter border pane / TR: Dekoratif çevre cam paneli / FR: Vitre décorative de bordure / DE: Dekorative Randglasscheibe
+  border:
+    material: RED_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [0,1,2,3,4,5,6,7,8,9,17,18,26,27,35,36,44,45,46,47,48,49,50,51,52,53]
+
+  # ==[ WARNING & INFO ICON ]=====
+  # EN: Warning button reminding players that disposal is permanent / TR: İmha işleminin kalıcı olduğunu hatırlatan uyarı butonu / FR: Bouton d'avertissement rappelant la suppression permanente / DE: Warnsymbol, das an die dauerhafte Zerstörung erinnert
+  info:
+    material: BARRIER
+    display_name: "&c&l🗑 Trash Can"
+    lore:
+      - "&7Place items in the center to destroy them."
+      - "&cItems placed here cannot be recovered!"
+    slot: 49

@@ -1,0 +1,86 @@
+# ==[ TECHNOECONOMYPLUS - CHECK MENU ]=====
+# EN: DeluxeMenus-style configuration file for the physical bank check management interface.
+# EN: Players can write secure signed checks with unique serial UUIDs or redeem existing ones.
+# TR: Fiziksel banka çeki yönetim arayüzü için DeluxeMenus tarzı yapılandırma dosyası.
+# TR: Oyuncular benzersiz UUID seri numaralı güvenli imzalı çekler yazabilir veya çek bozdurabilir.
+# FR: Fichier de configuration façon DeluxeMenus pour l'interface de gestion des chèques bancaires physiques.
+# FR: Les joueurs peuvent émettre des chèques sécurisés signés avec UUID unique ou encaisser des chèques existants.
+# DE: Konfigurationsdatei im DeluxeMenus-Stil für die Verwaltung physischer Bankschecks.
+# DE: Spieler können sichere, signierte Schecks mit eindeutiger UUID ausstellen oder einlösen.
+
+# EN: Title displayed at the top of the GUI inventory / TR: Menü başlığı / FR: Titre du menu / DE: Menütitel
+menu_title: "&8&lBank Checks &7- &fManagement"
+
+# EN: Inventory size in slots (multiple of 9: 9, 18, 27, 36, 45, 54) / TR: Envanter boyutu / FR: Taille de l'inventaire / DE: Inventargröße
+size: 36
+
+items:
+  # ==[ BACKGROUND FILLER ]=====
+  # EN: Decorative border pane / TR: Dekoratif çerçeve camı / FR: Vitre décorative de bordure / DE: Dekorative Randglasscheibe
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [0,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,35]
+
+  # ==[ HEADER / OVERVIEW ]=====
+  # EN: Overview of the check system / TR: Çek sisteminin genel özeti / FR: Présentation générale du système de chèques / DE: Übersicht über das Scheck-System
+  header:
+    material: PAPER
+    display_name: "&f&lBank Check System"
+    lore:
+      - "&7Create physical bank checks on paper."
+      - "&7Checks can be traded, stored, or cashed."
+    slot: 4
+
+  # ==[ WRITE CHECK ACTION ]=====
+  # EN: Action trigger that prompts the player to enter a check amount via sign GUI / TR: Tabela arayüzü ile çek miktarı girdiren işlem / FR: Déclencheur ouvrant une interface de pancarte pour saisir le montant / DE: Aktion zum Öffnen der Schild-Eingabe für den Scheckbetrag
+  write_check:
+    material: WRITABLE_BOOK
+    display_name: "&e&lWrite a Check"
+    lore:
+      - "&7Issue a physical bank check."
+      - ""
+      - "&7Total checks issued: &f%technoeconomy_check_count%"
+      - "&7Last check amount: &f%technoeconomy_check_last_amount%"
+      - ""
+      - "&eClick to enter amount!"
+    slot: 11
+    click_commands:
+      # EN: Special action that triggers sign prompt / TR: Tabela girişini tetikleyen özel eylem / FR: Action spéciale déclenchant la pancarte / DE: Spezielle Aktion für Schild-Eingabe
+      - "[check_write]"
+
+  # ==[ MY CHECKS ]=====
+  # EN: View your active and redeemed checks / TR: Aktif ve bozdurulmuş çeklerinizi görüntüleyin / FR: Voir vos chèques actifs et encaissés / DE: Aktive und eingelöste Schecks ansehen
+  my_checks:
+    material: CHEST
+    display_name: "&a&lMy Active Checks"
+    lore:
+      - "&7View all checks you have issued."
+      - "&7Check their redemption status and value."
+      - ""
+      - "&eClick to view your checks!"
+    slot: 15
+    click_commands:
+      - "[open_checks]"
+
+  # ==[ INFORMATION CARD ]=====
+  # EN: Instructions on how checks work / TR: Çeklerin çalışma mantığı hakkında bilgilendirme / FR: Instructions sur le fonctionnement des chèques / DE: Hinweise zur Funktionsweise von Schecks
+  info:
+    material: BOOK
+    display_name: "&7&lInformation"
+    lore:
+      - "&7Right-click a physical check to cash it out."
+      - "&7Every check carries a tamper-proof unique UUID."
+      - "&7Counterfeit or duplicated checks are rejected."
+    slot: 22
+    click_commands:
+      - "[message] &eRight-click any physical check in your hand to deposit the funds."
+
+  # ==[ CLOSE BUTTON ]=====
+  # EN: Closes the check inventory / TR: Menüyü kapatır / FR: Ferme l'inventaire / DE: Schließt das Inventar
+  close:
+    material: BARRIER
+    display_name: "&c&lClose"
+    slot: 31
+    click_commands:
+      - "[close]"

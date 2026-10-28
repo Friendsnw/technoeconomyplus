@@ -1,0 +1,619 @@
+prefix: '&bᴛᴇᴄʜɴᴏᴇᴄᴏɴᴏᴍʏ&6ᴘʟᴜꜱ &7» &r'
+messages:
+  balance: '&aВаш баланс: &e{symbol}{amount}'
+  balance-other: '&aБаланс игрока {player}: &e{symbol}{amount}'
+  balance-given: '&aИгроку {player} успешно выдано &e{symbol}{amount}&a.'
+  balance-set: '&aБаланс игрока {player} установлен на &e{symbol}{amount}&a.'
+  no-permission: '&cУ вас нет прав для выполнения этой команды.'
+  player-not-found: '&cИгрок не найден: &e{player}'
+  invalid-amount: '&cНедопустимая сумма: &e{amount}'
+  invalid-usage: '&cНеверное использование: &e{usage}'
+  players-only: '&cЭта команда доступна только игрокам.'
+  license-invalid: '&cВаша лицензия недействительна или истекла.'
+  license-feature-locked: '&cДля использования этой функции необходимо обновить пакет
+    плагина.'
+  package-upgrade-needed: '&cДля использования этой функции необходимо обновить пакет
+    плагина.'
+  version-check-failed: '&cВерсия Java или Minecraft устарела. Требуется Minecraft
+    1.20+ и Java 17+.'
+  eco-usage: '&eИспользование: /eco <give|take|set|reset|backup|reload> [игрок] [сумма]'
+  eco-taken: '&aУ игрока {player} успешно списано &e{symbol}{amount}&a.'
+  eco-reset: '&aБаланс игрока {player} сброшен до: &e{symbol}{amount}&a.'
+  eco-backup-starting: '&eСоздание резервной копии, пожалуйста подождите...'
+  eco-backup-success: '&aРезервная копия успешно создана.'
+  eco-backup-failed: '&cОшибка создания резервной копии. Проверьте консоль.'
+  eco-reload-success: '&aКонфигурация и языковые файлы успешно перезагружены.'
+  corrupt-file-restored: '&eБаза данных была повреждена и восстановлена из резервной
+    копии.'
+  insufficient-funds: '&cУ вас недостаточно средств для этого!'
+  pay-self: '&cВы не можете отправить деньги самому себе!'
+  pay-sent: '&aОтправлено &e{symbol}{amount} &aигроку {player} &7(Комиссия: &e{symbol}{tax}&7).'
+  pay-received: '&aПолучено &e{symbol}{amount} &aот {player}.'
+  baltop-header: '&6&m---&r &e&lБогатейшие игроки &7(Стр. {page}/{total}) &6&m---'
+  baltop-entry: '&e#{rank} &f{player}&7: &a{amount}'
+  history-header: '&6&m---&r &e&lПоследние транзакции &6&m---'
+  history-empty: '&7У вас пока нет транзакций.'
+  bank-balance: '&aВаш банковский счет: &e{symbol}{amount}'
+  bank-usage: '&7Использование: &e/bank deposit <сумма>&7, &e/bank withdraw <сумма>&7
+    или &e/bank interest'
+  bank-interest-info: '&aСледующая выплата процентов через &e{minutes} мин. &7(&a+%{rate}&7).'
+  bank-deposit-success: '&aУспешно положено в банк &e{symbol}{amount}&a.'
+  bank-withdraw-success: '&aУспешно снято из банка &e{symbol}{amount}&a.'
+  bank-insufficient: '&cНа вашем банковском счете недостаточно средств!'
+  daily-already-claimed: '&cВы уже забрали сегодняшнюю награду! Возвращайтесь завтра.'
+  daily-claimed: '&aПолучена ежедневная награда: &e{symbol}{amount}&a! Серия: &6{streak}
+    дн.&a.'
+  bounty-list-header: '&6&m---&r &c&lАктивные награды &6&m---'
+  bounty-list-empty: '&7В данный момент нет активных наград.'
+  bounty-self: '&cВы не можете назначить награду за себя!'
+  bounty-broadcast: '&c&l[НАГРАДА] &e{player} &7назначил награду &a{symbol}{amount}
+    &7за голову &c{target}&7!'
+  bounty-claimed: '&6&l[НАГРАДА] &c{target} &aбыл повержен, получена награда &e{amount}&a!'
+  bounty-usage: '&7Использование: &e/bounty <игрок> <сумма> &7или &e/bounty list'
+  jobs-current: '&aВаша текущая профессия: &e{job}'
+  jobs-usage: '&7Использование: &e/jobs join <miner|farmer|hunter|builder|none>'
+  jobs-invalid: '&cНедопустимая профессия: &e{job}'
+  jobs-joined: '&aВы устроились на работу: &e{job}'
+  slots-usage: '&7Использование: &e/casino slots <ставка>'
+  slots-win: '&a&lДЖЕКПОТ! &aВы выиграли: &e{symbol}{amount}&a!'
+  slots-lose: '&cВы проиграли ставку. Повезет в следующий раз!'
+  coinflip-usage: '&7Использование: &e/coinflip <ставка> <heads|tails>'
+  coinflip-win: '&aВыпало: &e{result}&a! Вы выиграли: &e{symbol}{amount}&a!'
+  coinflip-lose: '&aВыпало: &e{result}&a. Вы проиграли ставку!'
+  lottery-info: '&6&lTechnoLottery &7| Банк: &a{pot} &7| Билетов: &e{tickets} &7|
+    Цена: &e{price} &7| Розыгрыш: &b{minutes}м'
+  lottery-my-tickets: '&7У вас &e{count} &7билетов в текущем розыгрыше.'
+  lottery-bought: '&aКуплено &e{count} &7билетов за &e{cost}&a!'
+  lottery-usage: '&7Использование: &e/lottery &7или &e/lottery buy <кол-во>'
+  lottery-winner-broadcast: '&6&l[ЛОТЕРЕЯ] &e{player} &aвыиграл главный приз: &e{symbol}{amount}&a!'
+  worth-no-item: '&cВозьмите предмет в руку или укажите его название!'
+  invalid-item: '&cНедопустимый предмет Minecraft!'
+  worth-info: '&7Предмет: &f{item} &7| Покупка: &a{buy} &7| Продажа: &e{sell}'
+  worth-not-sellable: Не продается
+  sell-usage: '&7Использование: &e/sell hand [кол-во] &7или &e/sell all'
+  sell-not-sellable: '&cЭтот предмет нельзя продать!'
+  sell-none-found: '&cВ инвентаре нет предметов для продажи!'
+  sell-success: '&aУспешно продано &e{count}x предметов &aза &e{amount}&a!'
+  sellwand-given: '&aИгроку {player} выдана палочка продажи ({uses} исп.).'
+  sellwand-empty: '&7В этом контейнере нет предметов для продажи!'
+  sellwand-success: '&aУспешно продано &e{count}x предметов &aза &e{amount}&a!'
+  sellwand-broken: '&cВаша палочка продажи сломалась!'
+  sell-unsellable-items: '&cЭти предметы нельзя продать: &f{items}&c.'
+  sell-nothing-to-sell: '&cВ окне продажи нет предметов.'
+  sell-all-success: '&aВы продали &f{count}&a предметов на сумму &f{amount}&a!'
+  market-admin-usage: '&7Использование: &e/market admin <add|remove> <id> [mat] [buy]
+    [sell] [category]'
+  market-admin-added: '&aТовар добавлен на рынок: &e{item}'
+  market-admin-removed: '&aТовар удален с рынка: &e{item}'
+  market-admin-not-found: '&cТовар не найден на рынке!'
+  market-buy-success: '&aКуплено 1x &e{item} &aза &e{symbol}{price}&a!'
+  market-sell-success: '&aПродано 1x &e{item} &aза &e{symbol}{price}&a!'
+  market-no-items: '&cУ вас нет этого предмета в инвентаре!'
+  ah-sell-usage: '&7Возьмите предмет и используйте &e/ah sell <цена>'
+  ah-listed: '&aПредмет {item} выставлен на аукцион за &e{symbol}{price}&a!'
+  ah-cant-buy-own: '&cВы не можете купить свой собственный лот!'
+  ah-bought: '&aКуплен предмет {item} за &e{symbol}{price}&a!'
+  ah-bid-placed: '&aСделана ставка &e{symbol}{amount}&a!'
+  ah-expired-returned: '&eИстекший предмет с аукциона возвращен в ваш инвентарь.'
+  chestshop-usage: '&7Посмотрите на сундук и введите &e/chestshop create <цена>'
+  chestshop-look-at-chest: '&cНужно смотреть прямо на сундук или бочку!'
+  chestshop-created: '&aМагазин-сундук создан! Цена за шт.: &e{symbol}{price}'
+  chestshop-empty: '&cВ этом магазине закончился товар!'
+  chestshop-purchased: '&aКуплено 1x &e{item} &aза &e{price}&a!'
+  chestshop-sold-notify: '&aИгрок купил 1x &e{item} &aв вашем магазине за &e{price}&a!'
+  payday-claimed: '&aПолучена зарплата: &e{amount}&a!'
+  stock-no-shares: '&7У вас нет акций.'
+  stock-portfolio-header: '&6&m---&r &e&lПортфель акций &6&m---'
+  stock-portfolio-total: '&7Общая стоимость портфеля: &e{total}$'
+  stock-portfolio-pl: '&7Прибыль / Убыток: {color}{pl}$'
+  stock-portfolio-entry: '&8» &e{company} &7- &f{amount} акций &8(&a{price}$/акция&8)'
+  stock-buy-usage: '&cИспользование: /stock buy <компания> <кол-во>'
+  stock-buy-invalid-amount: '&cНедопустимое количество акций!'
+  stock-buy-success: '&aКуплено {amount} акций компании {company}!'
+  stock-buy-failed: '&cОшибка покупки! Недостаточно средств или неверная компания.'
+  stock-sell-usage: '&cИспользование: /stock sell <компания> <кол-во>'
+  stock-sell-success: '&aПродано {amount} акций компании {company}!'
+  stock-sell-failed: '&cОшибка продажи! У вас недостаточно акций.'
+  company-create-usage: '&cИспользование: /company create <название_компании>'
+  company-created: '&aКомпания {name} успешно основана!'
+  company-create-failed: '&cОшибка создания! Недостаточно средств, неверное имя или
+    уже есть компания.'
+  company-not-found: '&cКомпания не найдена!'
+  company-none-owned: '&cУ вас нет своей компании!'
+  company-details-header: '&6&m---&r &e&lДанные компании: {name} &6&m---'
+  company-owner: '&7Владелец: &f{owner}'
+  company-vault: '&7Казна компании: &a{balance}$'
+  company-tax-debt: '&7Налоговый долг: &c{debt}$'
+  company-market-cap: '&7Капитализация: &e{cap}$'
+  company-share-price: '&7Цена акции: &b{price}$'
+  company-workers-count: '&7Сотрудников: &f{count}'
+  company-hire-usage: '&cИспользование: /company hire <игрок> <зарплата>'
+  company-hire-success: '&aИгрок {player} нанят с зарплатой {salary}$!'
+  company-hired-notice: '&aВы приняты на работу в {company}! Зарплата: {salary}$'
+  company-hire-failed: '&cОшибка при найме сотрудника!'
+  company-fire-usage: '&cИспользование: /company fire <игрок>'
+  company-fire-success: '&aСотрудник успешно уволен.'
+  company-fire-failed: '&cОшибка при увольнении сотрудника.'
+  company-deposit-usage: '&cИспользование: /company deposit <сумма>'
+  company-deposited: '&aПоложено {amount}$ в казну компании!'
+  company-withdraw-usage: '&cИспользование: /company withdraw <сумма>'
+  company-withdrawn: '&aСнято {amount}$ из казны компании!'
+  company-insufficient-vault: '&cНедостаточно средств в казне компании!'
+  company-no-tax-debt: '&aУ вашей компании нет налоговой задолженности.'
+  company-tax-paid: '&aОплачено {amount}$ налогового долга!'
+  company-tax-pay-failed: '&cОшибка оплаты налога! Недостаточно средств в казне.'
+  check-write-usage: '&cИспользование: /check write <сумма>'
+  check-inventory-full: '&cВаш инвентарь полностью заполнен!'
+  check-created: '&aУспешно выписан чек на сумму {amount}$!'
+  check-create-failed: '&cОшибка выписки чека! Недостаточно средств.'
+  check-redeemed: '&aЧек успешно обналичен, средства зачислены на ваш баланс!'
+  check-invalid: '&cЭтот чек недействителен или уже был обналичен!'
+  check-item-name: '&6&lБАНКОВСКИЙ ЧЕК &7(&e{amount}$&7)'
+  check-item-lore-amount: '&7Сумма: &a{amount}$'
+  check-item-lore-issuer: '&7Выписал: &f{issuer}'
+  check-item-lore-date: '&7Дата: &f{date}'
+  check-item-lore-click: '&eНажмите ПКМ, чтобы зачислить на счет!'
+  check-write-prompt: '&eВведите сумму для банковского чека:'
+  check-write-cancel: '&cСоздание чека отменено.'
+  duel-offer-header: '&6&m---&r &e&lВЫЗОВ НА ДУЭЛЬ: {player} &6&m---'
+  duel-offer-wager: '&7Ставка: &a{amount}$'
+  duel-offer-type: '&7Тип дуэли: &f{type}'
+  duel-offer-accept-hint: '&eПринять: &a/duel accept {player}'
+  duel-accept-usage: '&cИспользование: /duel accept <игрок>'
+  duel-accept-failed: '&cНе удалось принять дуэль! Истекло время или недостаточно
+    средств.'
+  duel-started: '&c&lДУЭЛЬ НАЧАЛАСЬ! &7Победит сильнейший!'
+  duel-won: '&a&lВЫ ВЫИГРАЛИ ДУЭЛЬ! &e{prize}$ зачислено на ваш баланс.'
+  duel-lost: '&c&lВЫ ПРОИГРАЛИ ДУЭЛЬ! &7Вы потеряли {amount}$.'
+  duel-stats-header: '&6&m---&r &e&lСтатистика дуэлей &6&m---'
+  duel-stats-wins: '&7Побед: &a{wins}'
+  duel-stats-losses: '&7Поражений: &c{losses}'
+  duel-stats-winnings: '&7Общий выигрыш: &e{total}$'
+  duel-offer-sent: '&aВызов на дуэль ({type}) на {amount}$ отправлен игроку {target}!'
+  duel-offer-failed: '&cНе удалось отправить вызов! Недостаточно средств или неверная
+    цель.'
+  duel-invalid-wager: '&cНедопустимая сумма ставки!'
+  feature-disabled: '&cЭта функция в данный момент отключена.'
+  hud-enabled: '&aHUD панель включена.'
+  hud-disabled: '&cHUD панель отключена.'
+  hud-already-on: '&eHUD панель уже включена.'
+  hud-already-off: '&eHUD панель уже отключена.'
+  hud-usage: '&cИспользование: /hud [toggle|on|off]'
+  trash-opened: '&7Мусорка открыта.'
+  command-disabled: '&cЭта команда отключена на этом сервере.'
+  payday-cooldown: '&cВы должны подождать &e{time} &cдо следующей зарплаты.'
+  hud-global-enabled: '&aHUD панель глобально &lвключена&r &aдля всех игроков.'
+  hud-global-disabled: '&cHUD панель глобально &lотключена&r &cдля всех игроков.'
+  chestshop-break-denied: '&cВы не можете сломать магазин другого игрока!'
+  chestshop-removed: '&aМагазин-сундук успешно удален.'
+  chestshop-sneak-required: '&eShift + ПКМ для взаимодействия с магазином!'
+  chestshop-price-updated: '&aЦена магазина обновлена до &e${price}&a!'
+  chestshop-name-empty: '&cНазвание магазина не может быть пустым.'
+  chestshop-created-no-item: '&aМагазин создан! В руке не было предмета. Откройте
+    меню управления для добавления товаров.'
+  chestshop-creation-cancelled: '&cСоздание магазина отменено.'
+  chestshop-product-added: '&aТовар &f{item} &aдобавлен с ценой &e${price}&a!'
+  clan-disabled: '&cĞ¡Ğ¸ÑсÑ‚ĞµĞ¼Ğ° ĞºĞ»Ğ°Ğ½Ğ¾Ğ² Ğ² Ğ´Ğ°Ğ½Ğ½Ñ‹Ğ¹ Ğ¼Ğ¾Ğ¼ĞµĞ½Ñ‚ Ğ¾Ñ‚ĞºĞ»ÑюÑ‡ĞµĞ½Ğ°.'
+  clan-not-in-clan: '&cĞ’Ñ‹ Ğ½Ğµ ÑсĞ¾ÑсÑ‚Ğ¾Ğ¸Ñ‚Ğµ Ğ½Ğ¸ Ğ² Ğ¾Ğ´Ğ½Ğ¾Ğ¼ ĞºĞ»Ğ°Ğ½Ğµ.'
+  clan-player-not-in-clan: '&cĞ­Ñ‚Ğ¾Ñ‚ Ğ¸Ğ³Ñ€Ğ¾Ğº Ğ½Ğµ ÑсĞ¾ÑсÑ‚Ğ¾Ğ¸Ñ‚ Ğ½Ğ¸ Ğ² Ğ¾Ğ´Ğ½Ğ¾Ğ¼
+    ĞºĞ»Ğ°Ğ½Ğµ.'
+  clan-player-not-online: '&cĞ­Ñ‚Ğ¾Ñ‚ Ğ¸Ğ³Ñ€Ğ¾Ğº Ğ½Ğµ Ğ² ÑсĞµÑ‚Ğ¸.'
+  clan-not-found: '&cĞšĞ»Ğ°Ğ½ Ğ½Ğµ Ğ½Ğ°Ğ¹Ğ´ĞµĞ½.'
+  clan-no-permission: '&cĞ£ Ğ²Ğ°Ñс Ğ½ĞµÑ‚ Ğ¿Ñ€Ğ°Ğ² Ğ´Ğ»Ñя Ğ²Ñ‹Ğ¿Ğ¾Ğ»Ğ½ĞµĞ½Ğ¸Ñя ÑэÑ‚Ğ¾Ğ³Ğ¾
+    Ğ´ĞµĞ¹ÑсÑ‚Ğ²Ğ¸Ñя Ğ² ĞºĞ»Ğ°Ğ½Ğµ.'
+  clan-already-in-clan: '&cĞ’Ñ‹ ÑƒĞ¶Ğµ ÑсĞ¾ÑсÑ‚Ğ¾Ğ¸Ñ‚Ğµ Ğ² ĞºĞ»Ğ°Ğ½Ğµ.'
+  clan-already-exists: '&cĞšĞ»Ğ°Ğ½ Ñс Ñ‚Ğ°ĞºĞ¸Ğ¼ Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸ĞµĞ¼ ÑƒĞ¶Ğµ ÑсÑƒÑ‰ĞµÑсÑ‚Ğ²ÑƒĞµÑ‚.'
+  clan-tag-already-exists: '&cĞšĞ»Ğ°Ğ½ Ñс Ñ‚Ğ°ĞºĞ¸Ğ¼ Ñ‚ĞµĞ³Ğ¾Ğ¼ ÑƒĞ¶Ğµ ÑсÑƒÑ‰ĞµÑсÑ‚Ğ²ÑƒĞµÑ‚.'
+  clan-name-too-short: '&cĞНĞ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ ĞºĞ»Ğ°Ğ½Ğ° ÑсĞ»Ğ¸ÑˆĞºĞ¾Ğ¼ ĞºĞ¾Ñ€Ğ¾Ñ‚ĞºĞ¾Ğµ
+    (Ğ¼Ğ¸Ğ½. {min} ÑсĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ²).'
+  clan-name-too-long: '&cĞНĞ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ ĞºĞ»Ğ°Ğ½Ğ° ÑсĞ»Ğ¸ÑˆĞºĞ¾Ğ¼ Ğ´Ğ»Ğ¸Ğ½Ğ½Ğ¾Ğµ
+    (Ğ¼Ğ°ĞºÑс. {max} ÑсĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ²).'
+  clan-tag-too-short: '&cĞ¢ĞµĞ³ ĞºĞ»Ğ°Ğ½Ğ° ÑсĞ»Ğ¸ÑˆĞºĞ¾Ğ¼ ĞºĞ¾Ñ€Ğ¾Ñ‚ĞºĞ¸Ğ¹ (Ğ¼Ğ¸Ğ½.
+    {min} ÑсĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ²).'
+  clan-tag-too-long: '&cĞ¢ĞµĞ³ ĞºĞ»Ğ°Ğ½Ğ° ÑсĞ»Ğ¸ÑˆĞºĞ¾Ğ¼ Ğ´Ğ»Ğ¸Ğ½Ğ½Ñ‹Ğ¹ (Ğ¼Ğ°ĞºÑс.
+    {max} ÑсĞ¸Ğ¼Ğ²Ğ¾Ğ»Ğ¾Ğ²).'
+  clan-name-blacklisted: '&cĞНĞ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ ĞºĞ»Ğ°Ğ½Ğ° ÑсĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ Ğ·Ğ°Ğ¿Ñ€ĞµÑ‰Ñ‘Ğ½Ğ½Ñ‹Ğµ
+    ÑсĞ»Ğ¾Ğ²Ğ°.'
+  clan-tag-blacklisted: '&cĞ¢ĞµĞ³ ĞºĞ»Ğ°Ğ½Ğ° ÑсĞ¾Ğ´ĞµÑ€Ğ¶Ğ¸Ñ‚ Ğ·Ğ°Ğ¿Ñ€ĞµÑ‰Ñ‘Ğ½Ğ½Ñ‹Ğµ
+    ÑсĞ»Ğ¾Ğ²Ğ°.'
+  clan-create-cooldown: '&cĞŸĞ¾Ğ´Ğ¾Ğ¶Ğ´Ğ¸Ñ‚Ğµ {seconds} ÑсĞµĞºÑƒĞ½Ğ´ Ğ¿ĞµÑ€ĞµĞ´ ÑсĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸ĞµĞ¼
+    ÑсĞ»ĞµĞ´ÑƒÑюÑ‰ĞµĞ³Ğ¾ ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-create-insufficient-funds: '&cĞ”Ğ»Ñя ÑсĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ñя ĞºĞ»Ğ°Ğ½Ğ° Ğ½ĞµĞ¾Ğ±Ñ…Ğ¾Ğ´Ğ¸Ğ¼Ğ¾
+    {cost}.'
+  clan-created: '&aĞšĞ»Ğ°Ğ½ &6{clan} &7[{tag}&7] &aÑƒÑсĞ¿ĞµÑˆĞ½Ğ¾ ÑсĞ¾Ğ·Ğ´Ğ°Ğ½!'
+  clan-created-broadcast: '&6{player} &eĞ¾ÑсĞ½Ğ¾Ğ²Ğ°Ğ½ Ğ½Ğ¾Ğ²Ñ‹Ğ¹ ĞºĞ»Ğ°Ğ½: &6{clan}
+    &7[{tag}&7]!'
+  clan-disbanded: '&cĞšĞ»Ğ°Ğ½ &6{clan} &cÑ€Ğ°ÑсĞ¿ÑƒÑ‰ĞµĞ½.'
+  clan-disband-confirm: '&cĞНĞ°Ğ¿Ğ¸ÑˆĞ¸Ñ‚Ğµ &e/clan disband confirm &cĞ´Ğ»Ñя Ğ¾ĞºĞ¾Ğ½Ñ‡Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ğ¾Ğ³Ğ¾
+    ÑƒĞ´Ğ°Ğ»ĞµĞ½Ğ¸Ñя ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-invite-sent: '&aĞŸÑ€Ğ¸Ğ³Ğ»Ğ°ÑˆĞµĞ½Ğ¸Ğµ Ğ¾Ñ‚Ğ¿Ñ€Ğ°Ğ²Ğ»ĞµĞ½Ğ¾ &e{player}&a.'
+  clan-invite-received: '&eĞ’Ğ°Ñс Ğ¿Ñ€Ğ¸Ğ³Ğ»Ğ°ÑсĞ¸Ğ»Ğ¸ Ğ² ĞºĞ»Ğ°Ğ½ &6{clan}&e! Ğ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒĞ¹Ñ‚Ğµ
+    &a/clan accept {clan} &eĞ¸Ğ»Ğ¸ &c/clan deny {clan}&e.'
+  clan-invite-limit-reached: '&cĞ”Ğ¾ÑсÑ‚Ğ¸Ğ³Ğ½ÑƒÑ‚ Ğ¼Ğ°ĞºÑсĞ¸Ğ¼ÑƒĞ¼ Ğ¾Ğ¶Ğ¸Ğ´Ğ°ÑюÑ‰Ğ¸Ñ…
+    Ğ¿Ñ€Ğ¸Ğ³Ğ»Ğ°ÑˆĞµĞ½Ğ¸Ğ¹.'
+  clan-invite-timeout: '&cĞŸÑ€Ğ¸Ğ³Ğ»Ğ°ÑˆĞµĞ½Ğ¸Ğµ Ğ´Ğ»Ñя &e{player} &cĞ¸ÑсÑ‚ĞµĞºĞ»Ğ¾.'
+  clan-invite-no-pending: '&cĞ£ Ğ²Ğ°Ñс Ğ½ĞµÑ‚ Ğ¾Ğ¶Ğ¸Ğ´Ğ°ÑюÑ‰ĞµĞ³Ğ¾ Ğ¿Ñ€Ğ¸Ğ³Ğ»Ğ°ÑˆĞµĞ½Ğ¸Ñя
+    Ğ¾Ñ‚ ÑэÑ‚Ğ¾Ğ³Ğ¾ ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-joined: '&aĞ’Ñ‹ Ğ²ÑсÑ‚ÑƒĞ¿Ğ¸Ğ»Ğ¸ Ğ² ĞºĞ»Ğ°Ğ½ &6{clan}&a!'
+  clan-member-joined: '&a{player} Ğ²ÑсÑ‚ÑƒĞ¿Ğ¸Ğ» Ğ² ĞºĞ»Ğ°Ğ½!'
+  clan-invite-denied: '&cĞ’Ñ‹ Ğ¾Ñ‚ĞºĞ»Ğ¾Ğ½Ğ¸Ğ»Ğ¸ Ğ¿Ñ€Ğ¸Ğ³Ğ»Ğ°ÑˆĞµĞ½Ğ¸Ğµ Ğ¾Ñ‚ &6{clan}&c.'
+  clan-invite-denied-notify: '&e{player} Ğ¾Ñ‚ĞºĞ»Ğ¾Ğ½Ğ¸Ğ» Ğ¿Ñ€Ğ¸Ğ³Ğ»Ğ°ÑˆĞµĞ½Ğ¸Ğµ Ğ²
+    ĞºĞ»Ğ°Ğ½.'
+  clan-kicked: '&cĞ’Ğ°Ñс Ğ²Ñ‹Ğ³Ğ½Ğ°Ğ»Ğ¸ Ğ¸Ğ· &6{clan}&c.'
+  clan-member-kicked: '&c{player} Ğ±Ñ‹Ğ» Ğ¸ÑсĞºĞ»ÑюÑ‡Ñ‘Ğ½ Ğ¸Ğ· ĞºĞ»Ğ°Ğ½Ğ° Ğ¸Ğ³Ñ€Ğ¾ĞºĞ¾Ğ¼
+    {actor}.'
+  clan-cannot-kick-rank: '&cĞНĞµĞ»ÑŒĞ·Ñя Ğ¸ÑсĞºĞ»ÑюÑ‡Ğ¸Ñ‚ÑŒ Ğ¸Ğ³Ñ€Ğ¾ĞºĞ° Ñс Ñ€Ğ°Ğ²Ğ½Ñ‹Ğ¼
+    Ğ¸Ğ»Ğ¸ Ğ±Ğ¾Ğ»ĞµĞµ Ğ²Ñ‹ÑсĞ¾ĞºĞ¸Ğ¼ Ñ€Ğ°Ğ½Ğ³Ğ¾Ğ¼.'
+  clan-promoted: '&aĞ’Ñ‹ Ğ¿Ğ¾Ğ²Ñ‹ÑˆĞµĞ½Ñ‹ Ğ´Ğ¾ &e{rank}&a!'
+  clan-member-promoted: '&a{player} Ğ¿Ğ¾Ğ²Ñ‹ÑˆĞµĞ½ Ğ´Ğ¾ &e{rank}&a.'
+  clan-max-rank-reached: '&cĞ­Ñ‚Ğ¾Ñ‚ ÑƒÑ‡Ğ°ÑсÑ‚Ğ½Ğ¸Ğº ÑƒĞ¶Ğµ Ğ¸Ğ¼ĞµĞµÑ‚ Ğ½Ğ°Ğ¸Ğ²Ñ‹ÑсÑˆĞ¸Ğ¹
+    Ñ€Ğ°Ğ½Ğ³.'
+  clan-cannot-promote-rank: '&cĞНĞµĞ»ÑŒĞ·Ñя Ğ¿Ğ¾Ğ²Ñ‹ÑсĞ¸Ñ‚ÑŒ Ğ´Ğ¾ Ğ²Ğ°ÑˆĞµĞ³Ğ¾ Ğ¸Ğ»Ğ¸
+    Ğ±Ğ¾Ğ»ĞµĞµ Ğ²Ñ‹ÑсĞ¾ĞºĞ¾Ğ³Ğ¾ Ñ€Ğ°Ğ½Ğ³Ğ°.'
+  clan-demoted: '&cĞ’Ñ‹ Ğ¿Ğ¾Ğ½Ğ¸Ğ¶ĞµĞ½Ñ‹ Ğ´Ğ¾ &e{rank}&c.'
+  clan-member-demoted: '&c{player} Ğ¿Ğ¾Ğ½Ğ¸Ğ¶ĞµĞ½ Ğ´Ğ¾ &e{rank}&c.'
+  clan-min-rank-reached: '&cĞ­Ñ‚Ğ¾Ñ‚ ÑƒÑ‡Ğ°ÑсÑ‚Ğ½Ğ¸Ğº ÑƒĞ¶Ğµ Ğ¸Ğ¼ĞµĞµÑ‚ Ğ½Ğ°Ğ¸Ğ¼ĞµĞ½ÑŒÑˆĞ¸Ğ¹
+    Ñ€Ğ°Ğ½Ğ³.'
+  clan-cannot-demote-rank: '&cĞНĞµĞ»ÑŒĞ·Ñя Ğ¿Ğ¾Ğ½Ğ¸Ğ·Ğ¸Ñ‚ÑŒ Ğ¸Ğ³Ñ€Ğ¾ĞºĞ° Ñс Ñ€Ğ°Ğ²Ğ½Ñ‹Ğ¼
+    Ğ¸Ğ»Ğ¸ Ğ±Ğ¾Ğ»ĞµĞµ Ğ²Ñ‹ÑсĞ¾ĞºĞ¸Ğ¼ Ñ€Ğ°Ğ½Ğ³Ğ¾Ğ¼.'
+  clan-ownership-transferred: '&6Ğ ÑƒĞºĞ¾Ğ²Ğ¾Ğ´ÑсÑ‚Ğ²Ğ¾ ĞºĞ»Ğ°Ğ½Ğ¾Ğ¼ Ğ¿ĞµÑ€ĞµĞ´Ğ°Ğ½Ğ¾
+    &e{player}&6!'
+  clan-new-leader-broadcast: '&6{player} Ñ‚ĞµĞ¿ĞµÑ€ÑŒ Ğ½Ğ¾Ğ²Ñ‹Ğ¹ Ğ»Ğ¸Ğ´ĞµÑ€ &6{clan}&6!'
+  clan-cannot-transfer-self: '&cĞ’Ñ‹ ÑƒĞ¶Ğµ ÑяĞ²Ğ»ÑяĞµÑ‚ĞµÑсÑŒ Ğ»Ğ¸Ğ´ĞµÑ€Ğ¾Ğ¼.'
+  clan-left: '&cĞ’Ñ‹ Ğ¿Ğ¾ĞºĞ¸Ğ½ÑƒĞ»Ğ¸ ĞºĞ»Ğ°Ğ½.'
+  clan-member-left: '&c{player} Ğ¿Ğ¾ĞºĞ¸Ğ½ÑƒĞ» ĞºĞ»Ğ°Ğ½.'
+  clan-leader-cannot-leave: '&cĞ›Ğ¸Ğ´ĞµÑ€Ñ‹ Ğ½Ğµ Ğ¼Ğ¾Ğ³ÑƒÑ‚ Ğ¿Ğ¾ĞºĞ¸Ğ½ÑƒÑ‚ÑŒ ĞºĞ»Ğ°Ğ½.
+    ĞŸĞµÑ€ĞµĞ´Ğ°Ğ¹Ñ‚Ğµ Ñ€ÑƒĞºĞ¾Ğ²Ğ¾Ğ´ÑсÑ‚Ğ²Ğ¾ Ğ¸Ğ»Ğ¸ Ñ€Ğ°ÑсĞ¿ÑƒÑсÑ‚Ğ¸Ñ‚Ğµ ĞºĞ»Ğ°Ğ½.'
+  clan-home-set: '&aĞ”Ğ¾Ğ¼ ĞºĞ»Ğ°Ğ½Ğ° ÑƒÑсÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ»ĞµĞ½ Ğ² Ğ²Ğ°ÑˆĞµĞ¹ Ñ‚ĞµĞºÑƒÑ‰ĞµĞ¹
+    Ğ¿Ğ¾Ğ·Ğ¸Ñ†Ğ¸Ğ¸.'
+  clan-home-not-set: '&cĞ”Ğ¾Ğ¼ ĞºĞ»Ğ°Ğ½Ğ° ĞµÑ‰Ñ‘ Ğ½Ğµ ÑƒÑсÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ»ĞµĞ½.'
+  clan-home-cooldown: '&cĞŸĞ¾Ğ´Ğ¾Ğ¶Ğ´Ğ¸Ñ‚Ğµ {seconds} ÑсĞµĞºÑƒĞ½Ğ´ Ğ¿ĞµÑ€ĞµĞ´ ÑсĞ»ĞµĞ´ÑƒÑюÑ‰ĞµĞ¹
+    Ñ‚ĞµĞ»ĞµĞ¿Ğ¾Ñ€Ñ‚Ğ°Ñ†Ğ¸ĞµĞ¹.'
+  clan-teleport-warmup: '&aĞ¢ĞµĞ»ĞµĞ¿Ğ¾Ñ€Ñ‚Ğ°Ñ†Ğ¸Ñя Ñ‡ĞµÑ€ĞµĞ· &e{seconds} &aÑсĞµĞºÑƒĞ½Ğ´.
+    ĞНĞµ Ğ´Ğ²Ğ¸Ğ³Ğ°Ğ¹Ñ‚ĞµÑсÑŒ Ğ¸ Ğ½Ğµ Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ°Ğ¹Ñ‚Ğµ ÑƒÑ€Ğ¾Ğ½!'
+  clan-teleport-cancelled-move: '&cĞ¢ĞµĞ»ĞµĞ¿Ğ¾Ñ€Ñ‚Ğ°Ñ†Ğ¸Ñя Ğ¾Ñ‚Ğ¼ĞµĞ½ĞµĞ½Ğ°: Ğ²Ñ‹
+    Ğ¿ĞµÑ€ĞµĞ´Ğ²Ğ¸Ğ½ÑƒĞ»Ğ¸ÑсÑŒ.'
+  clan-teleport-cancelled-damage: '&cĞ¢ĞµĞ»ĞµĞ¿Ğ¾Ñ€Ñ‚Ğ°Ñ†Ğ¸Ñя Ğ¾Ñ‚Ğ¼ĞµĞ½ĞµĞ½Ğ°: Ğ²Ñ‹
+    Ğ¿Ğ¾Ğ»ÑƒÑ‡Ğ¸Ğ»Ğ¸ ÑƒÑ€Ğ¾Ğ½.'
+  clan-teleport-success: '&aĞ’Ñ‹ Ñ‚ĞµĞ»ĞµĞ¿Ğ¾Ñ€Ñ‚Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ñ‹ Ğº Ğ´Ğ¾Ğ¼Ñƒ ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-base-set: '&aĞ‘Ğ°Ğ·Ğ° ĞºĞ»Ğ°Ğ½Ğ° &b{base} &aÑƒÑсÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ»ĞµĞ½Ğ° Ğ² Ğ²Ğ°ÑˆĞµĞ¹
+    Ñ‚ĞµĞºÑƒÑ‰ĞµĞ¹ Ğ¿Ğ¾Ğ·Ğ¸Ñ†Ğ¸Ğ¸.'
+  clan-base-not-found: '&cĞ‘Ğ°Ğ·Ğ° ĞºĞ»Ğ°Ğ½Ğ° &e{base} &cĞ½Ğµ ÑсÑƒÑ‰ĞµÑсÑ‚Ğ²ÑƒĞµÑ‚.'
+  clan-max-bases-reached: '&cĞ”Ğ¾ÑсÑ‚Ğ¸Ğ³Ğ½ÑƒÑ‚ Ğ¼Ğ°ĞºÑсĞ¸Ğ¼ÑƒĞ¼ Ğ±Ğ°Ğ· ĞºĞ»Ğ°Ğ½Ğ°
+    ({max}).'
+  clan-bank-deposit-success: '&a{amount} &aĞ²Ğ½ĞµÑсĞµĞ½Ğ¾ Ğ² Ğ±Ğ°Ğ½Ğº ĞºĞ»Ğ°Ğ½Ğ° (ĞНĞ°Ğ»Ğ¾Ğ³:
+    &c{tax}&a).'
+  clan-bank-deposit-broadcast: '&e{player} &aĞ²Ğ½Ñ‘Ñс &e{amount} &aĞ² ĞºĞ°Ğ·Ğ½Ñƒ ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-bank-deposit-insufficient-funds: '&cĞНĞµĞ´Ğ¾ÑсÑ‚Ğ°Ñ‚Ğ¾Ñ‡Ğ½Ğ¾ ÑсÑ€ĞµĞ´ÑсÑ‚Ğ²
+    Ğ² ĞºĞ¾ÑˆĞµĞ»ÑŒĞºĞµ.'
+  clan-bank-limit-reached: '&cĞ”Ğ¾ÑсÑ‚Ğ¸Ğ³Ğ½ÑƒÑ‚ Ğ»Ğ¸Ğ¼Ğ¸Ñ‚ Ğ±Ğ°Ğ½ĞºĞ° ĞºĞ»Ğ°Ğ½Ğ°
+    ({limit}).'
+  clan-bank-withdraw-success: '&a{amount} &aÑсĞ½ÑяÑ‚Ğ¾ Ñс Ğ±Ğ°Ğ½ĞºĞ° ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-bank-withdraw-broadcast: '&e{player} &aÑсĞ½ÑяĞ» &e{amount} &aĞ¸Ğ· ĞºĞ°Ğ·Ğ½Ñ‹
+    ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-bank-withdraw-insufficient-funds: '&cĞНĞµĞ´Ğ¾ÑсÑ‚Ğ°Ñ‚Ğ¾Ñ‡Ğ½Ğ¾ ÑсÑ€ĞµĞ´ÑсÑ‚Ğ²
+    Ğ² Ğ±Ğ°Ğ½ĞºĞµ ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-bank-withdraw-no-permission: '&cĞ’Ğ°Ñˆ Ñ€Ğ°Ğ½Ğ³ Ğ½Ğµ Ğ¿Ğ¾Ğ·Ğ²Ğ¾Ğ»ÑяĞµÑ‚ ÑсĞ½Ğ¸Ğ¼Ğ°Ñ‚ÑŒ
+    Ğ´ĞµĞ½ÑŒĞ³Ğ¸ Ğ¸Ğ· Ğ±Ğ°Ğ½ĞºĞ° ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-ally-request-sent: '&aĞ—Ğ°Ğ¿Ñ€Ğ¾Ñс Ğ½Ğ° ÑсĞ¾ÑюĞ· Ğ¾Ñ‚Ğ¿Ñ€Ğ°Ğ²Ğ»ĞµĞ½ ĞºĞ»Ğ°Ğ½Ñƒ
+    &6{clan}&a.'
+  clan-ally-request-received: '&eĞšĞ»Ğ°Ğ½ &6{clan} &eĞ·Ğ°Ğ¿Ñ€Ğ¾ÑсĞ¸Ğ» ÑсĞ¾ÑюĞ·! Ğ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒĞ¹Ñ‚Ğµ
+    &a/clan ally {clan} &eĞ´Ğ»Ñя Ğ¿Ñ€Ğ¸Ğ½ÑяÑ‚Ğ¸Ñя.'
+  clan-ally-established: '&aĞ¡Ğ¾ÑюĞ· Ñс &6{clan} &aÑƒÑсĞ¿ĞµÑˆĞ½Ğ¾ Ğ·Ğ°ĞºĞ»ÑюÑ‡Ñ‘Ğ½!'
+  clan-ally-removed: '&cĞ¡Ğ¾ÑюĞ· Ñс &6{clan} &cÑ€Ğ°ÑсÑ‚Ğ¾Ñ€Ğ³Ğ½ÑƒÑ‚.'
+  clan-ally-limit-reached: '&cĞšĞ»Ğ°Ğ½ Ğ´Ğ¾ÑсÑ‚Ğ¸Ğ³ Ğ¼Ğ°ĞºÑсĞ¸Ğ¼ÑƒĞ¼Ğ° ÑсĞ¾ÑюĞ·Ğ½Ğ¸ĞºĞ¾Ğ²
+    ({max}).'
+  clan-already-allied: '&cĞ’Ñ‹ ÑƒĞ¶Ğµ ÑсĞ¾ÑсÑ‚Ğ¾Ğ¸Ñ‚Ğµ Ğ² ÑсĞ¾ÑюĞ·Ğµ Ñс ÑэÑ‚Ğ¸Ğ¼ ĞºĞ»Ğ°Ğ½Ğ¾Ğ¼.'
+  clan-cannot-ally-enemy: '&cĞНĞµĞ»ÑŒĞ·Ñя Ğ·Ğ°ĞºĞ»ÑюÑ‡Ğ¸Ñ‚ÑŒ ÑсĞ¾ÑюĞ· Ñс Ğ²Ñ€Ğ°Ğ¶ĞµÑсĞºĞ¸Ğ¼
+    ĞºĞ»Ğ°Ğ½Ğ¾Ğ¼.'
+  clan-enemy-declared: '&c&6{clan} &cĞ¾Ğ±ÑŠÑяĞ²Ğ»ĞµĞ½ Ğ²Ñ€Ğ°Ğ¶ĞµÑсĞºĞ¸Ğ¼ ĞºĞ»Ğ°Ğ½Ğ¾Ğ¼!'
+  clan-enemy-removed: '&aĞ¡Ñ‚Ğ°Ñ‚ÑƒÑс Ğ²Ñ€Ğ°Ğ³Ğ° Ñс &6{clan} &aÑсĞ½ÑяÑ‚.'
+  clan-enemy-limit-reached: '&cĞ”Ğ¾ÑсÑ‚Ğ¸Ğ³Ğ½ÑƒÑ‚ Ğ¼Ğ°ĞºÑсĞ¸Ğ¼ÑƒĞ¼ Ğ²Ñ€Ğ°Ğ¶ĞµÑсĞºĞ¸Ñ…
+    ĞºĞ»Ğ°Ğ½Ğ¾Ğ².'
+  clan-already-enemies: '&cĞ’Ñ‹ ÑƒĞ¶Ğµ Ğ²Ñ€Ğ°Ğ³Ğ¸ Ñс ÑэÑ‚Ğ¸Ğ¼ ĞºĞ»Ğ°Ğ½Ğ¾Ğ¼.'
+  clan-cannot-enemy-ally: '&cĞНĞµĞ»ÑŒĞ·Ñя Ğ¾Ğ±ÑŠÑяĞ²Ğ¸Ñ‚ÑŒ Ğ²Ğ¾Ğ¹Ğ½Ñƒ ÑсĞ¾ÑюĞ·Ğ½Ğ¾Ğ¼Ñƒ
+    ĞºĞ»Ğ°Ğ½Ñƒ.'
+  clan-war-declared-challenger: '&cĞОĞ±ÑŠÑяĞ²Ğ»ĞµĞ½Ğ¸Ğµ Ğ²Ğ¾Ğ¹Ğ½Ñ‹ ĞºĞ»Ğ°Ğ½Ñƒ &6{clan}
+    &cĞ¾Ñ‚Ğ¿Ñ€Ğ°Ğ²Ğ»ĞµĞ½Ğ¾!'
+  clan-war-declared-target: '&4ĞšĞ»Ğ°Ğ½ &6{clan} &4Ğ¾Ğ±ÑŠÑяĞ²Ğ¸Ğ» Ğ²Ğ°ÑˆĞµĞ¼Ñƒ ĞºĞ»Ğ°Ğ½Ñƒ
+    Ğ²Ğ¾Ğ¹Ğ½Ñƒ! Ğ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·ÑƒĞ¹Ñ‚Ğµ &c/clan war accept &4Ğ´Ğ»Ñя Ğ¿Ñ€Ğ¸Ğ½ÑяÑ‚Ğ¸Ñя.'
+  clan-war-accepted: '&4&lĞ’ĞОĞ™ĞНĞА ĞНĞАĞ§ĞАĞ›ĞАĞ¡Ğ¬! &cĞšĞ»Ğ°Ğ½Ğ¾Ğ²Ğ°Ñя Ğ²Ğ¾Ğ¹Ğ½Ğ°
+    Ğ¿Ñ€Ğ¾Ñ‚Ğ¸Ğ² &6{clan} &cĞ½Ğ°Ñ‡Ğ°Ñ‚Ğ°! Ğ”Ğ»Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ğ¾ÑсÑ‚ÑŒ: {duration} Ğ¼Ğ¸Ğ½ÑƒÑ‚.'
+  clan-war-declined: '&eĞ’Ñ‹Ğ·Ğ¾Ğ² Ğ½Ğ° Ğ²Ğ¾Ğ¹Ğ½Ñƒ Ñс &6{clan} &eĞ¾Ñ‚ĞºĞ»Ğ¾Ğ½Ñ‘Ğ½.'
+  clan-war-no-pending: '&cĞНĞµÑ‚ Ğ¾Ğ¶Ğ¸Ğ´Ğ°ÑюÑ‰ĞµĞ³Ğ¾ Ğ²Ñ‹Ğ·Ğ¾Ğ²Ğ° Ğ½Ğ° Ğ²Ğ¾Ğ¹Ğ½Ñƒ
+    Ğ¾Ñ‚ ÑэÑ‚Ğ¾Ğ³Ğ¾ ĞºĞ»Ğ°Ğ½Ğ°.'
+  clan-war-already-active: '&cĞ”Ğ»Ñя ÑэÑ‚Ğ¾Ğ³Ğ¾ ĞºĞ»Ğ°Ğ½Ğ° ÑƒĞ¶Ğµ Ğ°ĞºÑ‚Ğ¸Ğ²Ğ½Ğ° Ğ²Ğ¾Ğ¹Ğ½Ğ°.'
+  clan-war-min-members: '&cĞОĞ±Ğ° ĞºĞ»Ğ°Ğ½Ğ° Ğ´Ğ¾Ğ»Ğ¶Ğ½Ñ‹ Ğ¸Ğ¼ĞµÑ‚ÑŒ Ğ¼Ğ¸Ğ½Ğ¸Ğ¼ÑƒĞ¼
+    {min} Ğ¾Ğ½Ğ»Ğ°Ğ¹Ğ½-ÑƒÑ‡Ğ°ÑсÑ‚Ğ½Ğ¸ĞºĞ¾Ğ² Ğ´Ğ»Ñя Ğ½Ğ°Ñ‡Ğ°Ğ»Ğ° Ğ²Ğ¾Ğ¹Ğ½Ñ‹.'
+  clan-war-cooldown: '&cĞ’Ğ°Ñˆ ĞºĞ»Ğ°Ğ½ Ğ½Ğ°Ñ…Ğ¾Ğ´Ğ¸Ñ‚ÑсÑя Ğ½Ğ° Ğ¿ĞµÑ€ĞµĞ·Ğ°Ñ€ÑяĞ´ĞºĞµ
+    Ğ²Ğ¾Ğ¹Ğ½Ñ‹ ĞµÑ‰Ñ‘ {hours} Ñ‡.'
+  clan-war-won: '&a&lĞŸĞОĞ‘Ğ•Ğ”ĞА! &aĞ’Ğ°Ñˆ ĞºĞ»Ğ°Ğ½ Ğ²Ñ‹Ğ¸Ğ³Ñ€Ğ°Ğ» Ğ²Ğ¾Ğ¹Ğ½Ñƒ Ğ¿Ñ€Ğ¾Ñ‚Ğ¸Ğ²
+    &6{clan}&a! ĞНĞ°Ğ³Ñ€Ğ°Ğ´Ğ°: &e{reward}'
+  clan-war-lost: '&c&lĞŸĞОĞ ĞАĞ–Ğ•ĞНĞ˜Ğ•! &cĞ’Ğ°Ñˆ ĞºĞ»Ğ°Ğ½ Ğ¿Ñ€Ğ¾Ğ¸Ğ³Ñ€Ğ°Ğ» Ğ²Ğ¾Ğ¹Ğ½Ñƒ
+    Ğ¿Ñ€Ğ¾Ñ‚Ğ¸Ğ² &6{clan}&c. Ğ¨Ñ‚Ñ€Ğ°Ñ„: &e{penalty}'
+  clan-war-kill: '&a+1 Ğ£Ğ±Ğ¸Ğ¹ÑсÑ‚Ğ²Ğ¾ Ğ² Ğ²Ğ¾Ğ¹Ğ½Ğµ! &7({player} ÑƒÑсÑ‚Ñ€Ğ°Ğ½Ğ¸Ğ»
+    {victim})'
+  clan-war-death: '&c-1 Ğ¡Ğ¼ĞµÑ€Ñ‚ÑŒ Ğ² Ğ²Ğ¾Ğ¹Ğ½Ğµ! &7({player} ÑƒĞ±Ğ¸Ñ‚ Ğ¸Ğ³Ñ€Ğ¾ĞºĞ¾Ğ¼
+    {killer})'
+  clan-level-up: '&6&lĞ£Ğ ĞОĞ’Ğ•ĞНĞ¬ ĞšĞ›ĞАĞНĞА! &eĞ’Ğ°Ñˆ ĞºĞ»Ğ°Ğ½ Ğ¿Ğ¾Ğ´Ğ½ÑяĞ»ÑсÑя
+    Ğ´Ğ¾ Ğ£Ñ€Ğ¾Ğ²Ğ½Ñя &b{level}&e!'
+  clan-friendly-fire-blocked: '&cĞОĞ³Ğ¾Ğ½ÑŒ Ğ¿Ğ¾ ÑсĞ²Ğ¾Ğ¸Ğ¼ Ğ¼ĞµĞ¶Ğ´Ñƒ Ñ‡Ğ»ĞµĞ½Ğ°Ğ¼Ğ¸
+    ĞºĞ»Ğ°Ğ½Ğ° Ğ¾Ñ‚ĞºĞ»ÑюÑ‡Ñ‘Ğ½.'
+  clan-ally-fire-blocked: '&cĞОĞ³Ğ¾Ğ½ÑŒ Ğ¿Ğ¾ ÑсĞ²Ğ¾Ğ¸Ğ¼ Ğ¼ĞµĞ¶Ğ´Ñƒ ÑсĞ¾ÑюĞ·Ğ½Ñ‹Ğ¼Ğ¸
+    ĞºĞ»Ğ°Ğ½Ğ°Ğ¼Ğ¸ Ğ¾Ñ‚ĞºĞ»ÑюÑ‡Ñ‘Ğ½.'
+  clan-recruit-promoted: '&cĞŸĞ¾Ğ·Ğ´Ñ€Ğ°Ğ²Ğ»ÑяĞµĞ¼! Ğ˜ÑсĞ¿Ñ‹Ñ‚Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğ¹ ÑсÑ€Ğ¾Ğº
+    Ğ·Ğ°Ğ²ĞµÑ€ÑˆÑ‘Ğ½, Ğ²Ñ‹ Ğ¿Ğ¾Ğ²Ñ‹ÑˆĞµĞ½Ñ‹ Ğ´Ğ¾ Ğ£Ğ§ĞАĞ¡Ğ¢ĞНĞ˜ĞšĞА.'
+  clan-daily-xp-reward: '&a+&e{xp} ĞОĞ¿Ñ‹Ñ‚Ğ° ĞšĞ»Ğ°Ğ½Ğ° &aĞ·Ğ° ĞµĞ¶ĞµĞ´Ğ½ĞµĞ²Ğ½ÑƒÑю
+    Ğ°ĞºÑ‚Ğ¸Ğ²Ğ½Ğ¾ÑсÑ‚ÑŒ Ğ½Ğ° ÑсĞµÑ€Ğ²ĞµÑ€Ğµ!'
+  clan-create-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan create <Ñ‚ĞµĞ³> <Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ>'
+  clan-invite-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan invite <Ğ¸Ğ³Ñ€Ğ¾Ğº>'
+  clan-kick-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan kick <Ğ¸Ğ³Ñ€Ğ¾Ğº>'
+  clan-promote-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan promote <Ğ¸Ğ³Ñ€Ğ¾Ğº>'
+  clan-demote-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan demote <Ğ¸Ğ³Ñ€Ğ¾Ğº>'
+  clan-transfer-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan transfer <Ğ¸Ğ³Ñ€Ğ¾Ğº>'
+  clan-setbase-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan setbase <Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ>'
+  clan-base-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan base <Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ>'
+  clan-ally-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan ally <ĞºĞ»Ğ°Ğ½>'
+  clan-unally-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan unally <ĞºĞ»Ğ°Ğ½>'
+  clan-enemy-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan enemy <ĞºĞ»Ğ°Ğ½>'
+  clan-unenemy-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan unenemy <ĞºĞ»Ğ°Ğ½>'
+  clan-war-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan war <declare|accept|deny> [ĞºĞ»Ğ°Ğ½]'
+  clan-bank-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan bank <deposit|withdraw> <ÑсÑƒĞ¼Ğ¼Ğ°>'
+  clan-chat-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan chat <ÑсĞ¾Ğ¾Ğ±Ñ‰ĞµĞ½Ğ¸Ğµ>'
+  clan-allychat-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clan allychat <ÑсĞ¾Ğ¾Ğ±Ñ‰ĞµĞ½Ğ¸Ğµ>'
+  clan-help-header: '&6==[ ĞšĞОĞœĞАĞНĞ”Ğ« ĞšĞ›ĞАĞНĞА ]=='
+  clan-help-create: '&e/clan create <Ñ‚ĞµĞ³> <Ğ½Ğ°Ğ·Ğ²Ğ°Ğ½Ğ¸Ğµ> &7- Ğ¡Ğ¾Ğ·Ğ´Ğ°Ñ‚ÑŒ
+    ĞºĞ»Ğ°Ğ½'
+  clan-help-invite: '&e/clan invite <Ğ¸Ğ³Ñ€Ğ¾Ğº> &7- ĞŸÑ€Ğ¸Ğ³Ğ»Ğ°ÑсĞ¸Ñ‚ÑŒ Ğ¸Ğ³Ñ€Ğ¾ĞºĞ°'
+  clan-help-members: '&e/clan kick|promote|demote <Ğ¸Ğ³Ñ€Ğ¾Ğº> &7- Ğ£Ğ¿Ñ€Ğ°Ğ²Ğ»ĞµĞ½Ğ¸Ğµ
+    Ñ‡Ğ»ĞµĞ½Ğ°Ğ¼Ğ¸'
+  clan-help-bank: '&e/clan bank [deposit|withdraw] [ÑсÑƒĞ¼Ğ¼Ğ°] &7- ĞšĞ°Ğ·Ğ½Ğ° ĞºĞ»Ğ°Ğ½Ğ°'
+  clan-help-war: '&e/clan war <declare|accept|deny> [ĞºĞ»Ğ°Ğ½] &7- Ğ’Ğ¾Ğ¹Ğ½Ğ° ĞºĞ»Ğ°Ğ½Ğ°'
+  clan-help-bases: '&e/clan sethome|home|setbase|base &7- Ğ¢Ğ¾Ñ‡ĞºĞ¸ Ñ‚ĞµĞ»ĞµĞ¿Ğ¾Ñ€Ñ‚Ğ°Ñ†Ğ¸Ğ¸'
+  clan-help-relations: '&e/clan ally|enemy <ĞºĞ»Ğ°Ğ½> &7- Ğ”Ğ¸Ğ¿Ğ»Ğ¾Ğ¼Ğ°Ñ‚Ğ¸Ñя'
+  clan-info-header: '&6==[ Ğ˜ĞНĞ¤ĞОĞ ĞœĞАĞ¦Ğ˜Ğ¯ ĞО ĞšĞ›ĞАĞНĞ•: &e{clan} &6]=='
+  clan-info-tag: '&7Ğ¢ĞµĞ³: &e[{tag}]'
+  clan-info-leader: '&7Ğ›Ğ¸Ğ´ĞµÑ€: &f{leader}'
+  clan-info-level: '&7Ğ£Ñ€Ğ¾Ğ²ĞµĞ½ÑŒ: &b{level} &8({xp} ĞОĞ¿Ñ‹Ñ‚Ğ°)'
+  clan-info-members: '&7Ğ£Ñ‡Ğ°ÑсÑ‚Ğ½Ğ¸ĞºĞ¸: &a{count}&7/&2{max}'
+  clan-info-bank: '&7ĞšĞ°Ğ·Ğ½Ğ° ĞšĞ»Ğ°Ğ½Ğ°: &6{balance}'
+  clan-info-kdr: '&7ĞšĞ”Ğ¡: &c{kills}&7/&4{deaths} &8(&f{kdr}&8)'
+  clan-info-allies: '&7Ğ¡Ğ¾ÑюĞ·Ğ½Ğ¸ĞºĞ¸: &a{allies}'
+  clanadmin-list-header: '&6==[ Ğ’Ğ¡Ğ• ĞšĞ›ĞАĞНĞ« ({count}) ]=='
+  clanadmin-list-entry: '&7- &6{clan} &e[{tag}] &7(Ğ£Ñ€. {level}, {members} ÑƒÑ‡Ğ°ÑсÑ‚Ğ½Ğ¸ĞºĞ¾Ğ²)'
+  clanadmin-info-header: '&6==[ ADMIN Ğ˜ĞНĞ¤ĞОĞ ĞœĞАĞ¦Ğ˜Ğ¯ ĞО ĞšĞ›ĞАĞНĞ•: &e{clan}
+    &6]=='
+  clanadmin-info-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clanadmin info <ĞºĞ»Ğ°Ğ½>'
+  clanadmin-delete-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clanadmin delete <ĞºĞ»Ğ°Ğ½>'
+  clanadmin-deleted: '&aĞšĞ»Ğ°Ğ½ &6{clan} &aĞ¾ĞºĞ¾Ğ½Ñ‡Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ğ¾ ÑƒĞ´Ğ°Ğ»Ñ‘Ğ½.'
+  clanadmin-forcejoin-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clanadmin forcejoin <Ğ¸Ğ³Ñ€Ğ¾Ğº>
+    <ĞºĞ»Ğ°Ğ½>'
+  clanadmin-forcejoined: '&a{player} &aĞ¿Ñ€Ğ¸Ğ½ÑƒĞ´Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ğ¾ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½
+    Ğ² &6{clan}&a.'
+  clanadmin-target-forcejoined: '&eĞАĞ´Ğ¼Ğ¸Ğ½Ğ¸ÑсÑ‚Ñ€Ğ°Ñ‚Ğ¾Ñ€ Ğ´Ğ¾Ğ±Ğ°Ğ²Ğ¸Ğ» Ğ²Ğ°Ñс
+    Ğ² ĞºĞ»Ğ°Ğ½ &6{clan}&e.'
+  clanadmin-forceleave-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clanadmin forceleave
+    <Ğ¸Ğ³Ñ€Ğ¾Ğº>'
+  clanadmin-forceleft: '&a{player} &aĞ¿Ñ€Ğ¸Ğ½ÑƒĞ´Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ğ¾ Ğ²Ñ‹Ğ²ĞµĞ´ĞµĞ½ Ğ¸Ğ·
+    &6{clan}&a.'
+  clanadmin-cannot-forceleave-leader: '&cĞНĞµĞ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ğ¾ Ğ¿Ñ€Ğ¸Ğ½ÑƒĞ´Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ğ¾
+    ÑƒĞ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ Ğ»Ğ¸Ğ´ĞµÑ€Ğ° ĞºĞ»Ğ°Ğ½Ğ°.'
+  clanadmin-setlevel-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clanadmin setlevel <ĞºĞ»Ğ°Ğ½>
+    <ÑƒÑ€Ğ¾Ğ²ĞµĞ½ÑŒ>'
+  clanadmin-level-set: '&aĞ£Ñ€Ğ¾Ğ²ĞµĞ½ÑŒ ĞºĞ»Ğ°Ğ½Ğ° &6{clan} &aÑƒÑсÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ»ĞµĞ½
+    Ğ½Ğ° &b{level}&a.'
+  clanadmin-addxp-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clanadmin addxp <ĞºĞ»Ğ°Ğ½>
+    <Ğ¾Ğ¿Ñ‹Ñ‚>'
+  clanadmin-xp-added: '&aĞšĞ»Ğ°Ğ½Ñƒ &6{clan} &aĞ´Ğ¾Ğ±Ğ°Ğ²Ğ»ĞµĞ½Ğ¾ &b{xp} ĞОĞ¿Ñ‹Ñ‚Ğ°&a.'
+  clanadmin-setbank-usage: '&cĞ˜ÑсĞ¿Ğ¾Ğ»ÑŒĞ·Ğ¾Ğ²Ğ°Ğ½Ğ¸Ğµ: /clanadmin setbank <ĞºĞ»Ğ°Ğ½>
+    <ÑсÑƒĞ¼Ğ¼Ğ°>'
+  clanadmin-bank-set: '&aĞ‘Ğ°Ğ»Ğ°Ğ½Ñс ĞºĞ°Ğ·Ğ½Ñ‹ &6{clan} &aÑƒÑсÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ»ĞµĞ½ Ğ½Ğ°
+    &e{amount}&a.'
+  clanadmin-reloaded: '&aĞšĞ¾Ğ½Ñ„Ğ¸Ğ³ÑƒÑ€Ğ°Ñ†Ğ¸Ñя Ğ¸ Ğ±Ğ°Ğ·Ğ° Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ… ĞºĞ»Ğ°Ğ½Ğ¾Ğ²
+    ÑƒÑсĞ¿ĞµÑˆĞ½Ğ¾ Ğ¿ĞµÑ€ĞµĞ·Ğ°Ğ³Ñ€ÑƒĞ¶ĞµĞ½Ñ‹.'
+  clanadmin-help-header: '&6==[ ĞšĞОĞœĞАĞНĞ”Ğ« ADMIN ĞšĞ›ĞАĞНĞА ]=='
+  clanadmin-help-list: '&e/clanadmin list &7- Ğ¡Ğ¿Ğ¸ÑсĞ¾Ğº Ğ²ÑсĞµÑ… ĞºĞ»Ğ°Ğ½Ğ¾Ğ²'
+  clanadmin-help-info: '&e/clanadmin info <ĞºĞ»Ğ°Ğ½> &7- Ğ˜Ğ½Ñ„Ğ¾Ñ€Ğ¼Ğ°Ñ†Ğ¸Ñя Ğ¾ ĞºĞ»Ğ°Ğ½Ğµ'
+  clanadmin-help-delete: '&e/clanadmin delete <ĞºĞ»Ğ°Ğ½> &7- Ğ£Ğ´Ğ°Ğ»Ğ¸Ñ‚ÑŒ ĞºĞ»Ğ°Ğ½'
+  clanadmin-help-forcejoin: '&e/clanadmin forcejoin <Ğ¸Ğ³Ñ€Ğ¾Ğº> <ĞºĞ»Ğ°Ğ½> &7- ĞŸÑ€Ğ¸Ğ½ÑƒĞ´Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ğ¾Ğµ
+    Ğ²ÑсÑ‚ÑƒĞ¿Ğ»ĞµĞ½Ğ¸Ğµ'
+  clanadmin-help-forceleave: '&e/clanadmin forceleave <Ğ¸Ğ³Ñ€Ğ¾Ğº> &7- ĞŸÑ€Ğ¸Ğ½ÑƒĞ´Ğ¸Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğ¹
+    Ğ²Ñ‹Ñ…Ğ¾Ğ´'
+  clanadmin-help-setlevel: '&e/clanadmin setlevel <ĞºĞ»Ğ°Ğ½> <ÑƒÑ€Ğ¾Ğ²ĞµĞ½ÑŒ> &7-
+    Ğ£ÑсÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‚ÑŒ ÑƒÑ€Ğ¾Ğ²ĞµĞ½ÑŒ'
+  clanadmin-help-addxp: '&e/clanadmin addxp <ĞºĞ»Ğ°Ğ½> <Ğ¾Ğ¿Ñ‹Ñ‚> &7- Ğ”Ğ¾Ğ±Ğ°Ğ²Ğ¸Ñ‚ÑŒ
+    Ğ¾Ğ¿Ñ‹Ñ‚'
+  clanadmin-help-setbank: '&e/clanadmin setbank <ĞºĞ»Ğ°Ğ½> <ÑсÑƒĞ¼Ğ¼Ğ°> &7- Ğ£ÑсÑ‚Ğ°Ğ½Ğ¾Ğ²Ğ¸Ñ‚ÑŒ
+    ĞºĞ°Ğ·Ğ½Ñƒ'
+  clanadmin-help-reload: '&e/clanadmin reload &7- ĞŸĞµÑ€ĞµĞ·Ğ°Ğ³Ñ€ÑƒĞ·Ğ¸Ñ‚ÑŒ ĞºĞ¾Ğ½Ñ„Ğ¸Ğ³ÑƒÑ€Ğ°Ñ†Ğ¸Ñю'
+  clan-allied-broadcast: '&aВаш клан заключил союз с кланом &6{clan}&a!'
+  clan-already-allies: '&cВы уже состоите в союзе с &6{clan}&c.'
+  clan-already-in-war: '&cВаш клан уже участвует в активной войне.'
+  clan-auto-promoted: '&aПоздравляем! Вы автоматически повышены до &eMEMBER&a.'
+  clan-bank-deposited: '&aВнесено &e{amount} &aв казну клана (Чистыми: &e{net}&a,
+    Налог: &c{tax}&a).'
+  clan-bank-deposited-broadcast: '&e{player} &aвнёс &e{amount} &aв казну клана.'
+  clan-bank-insufficient-funds: '&cВ казне клана недостаточно средств.'
+  clan-bank-withdraw-no-rank: '&cДля снятия средств требуется ранг &e{rank} &cили
+    выше.'
+  clan-bank-withdrawn: '&aУспешно снято &e{amount} &aиз казны клана.'
+  clan-bank-withdrawn-broadcast: '&e{player} &aснял &e{amount} &aиз казны клана.'
+  clan-base-limit-reached: '&cДостигнут лимит баз клана ({max}).'
+  clan-base-set-success: '&aБаза клана &e{base} &aустановлена на вашей позиции.'
+  clan-base-teleported: '&aВы телепортированы на базу клана.'
+  clan-base-teleporting: '&aТелепортация на базу через &e{time}с&a. Не двигайтесь!'
+  clan-cannot-demote-higher: '&cНельзя понизить игрока с равным или более высоким
+    рангом.'
+  clan-cannot-demote-lowest: '&cУчастник уже находится на минимальном ранге.'
+  clan-cannot-kick-higher: '&cНельзя выгнать игрока с равным или более высоким рангом.'
+  clan-cannot-kick-leader: '&cНельзя выгнать лидера клана.'
+  clan-cannot-promote-equal: '&cНельзя повысить до своего ранга или выше.'
+  clan-cannot-promote-max: '&cУчастник уже имеет максимально возможный ранг.'
+  clan-created-success: '&aКлан &6{name} &7[{tag}&7] &aуспешно создан!'
+  clan-demoted-broadcast: '&c{player} &eбыл понижен с ранга &e{rank}&e.'
+  clan-disbanded-broadcast: '&cКлан &6{clan} &cбыл распущен лидером.'
+  clan-enemy-declared-broadcast: '&cКлан &6{clan} &cобъявлен врагом!'
+  clan-home-set-success: '&aДом клана установлен в вашей текущей точке.'
+  clan-home-teleported: '&aВы телепортированы в дом клана.'
+  clan-home-teleporting: '&aТелепортация в дом клана через &e{time}с&a. Не двигайтесь!'
+  clan-invalid-name-length: '&cНазвание клана должно быть от {min} до {max} символов.'
+  clan-invalid-tag-length: '&cТег клана должен быть от {min} до {max} символов.'
+  clan-invite-max-pending: '&cДостигнут максимум ожидающих приглашений.'
+  clan-invite-none: '&cУ вас нет ожидающих приглашений.'
+  clan-kicked-broadcast: '&c{player} был выгнан из клана игроком {actor}.'
+  clan-kicked-notice: '&cВас выгнали из клана &6{clan}&c.'
+  clan-left-success: '&cВы покинули клан &6{clan}&c.'
+  clan-level-up-broadcast: '&6&lНОВЫЙ УРОВЕНЬ КЛАНА! &eКлан достиг Уровня &b{level}&e!'
+  clan-max-allies-reached: '&cДостигнут максимум союзников ({max}).'
+  clan-max-enemies-reached: '&cДостигнут максимум врагов ({max}).'
+  clan-member-joined-broadcast: '&a{player} вступил в клан!'
+  clan-member-left-broadcast: '&e{player} покинул клан.'
+  clan-member-not-found: '&cУчастник клана не найден.'
+  clan-members-limit-reached: '&cДостигнута максимальная вместимость участников.'
+  clan-name-taken: '&cНазвание клана &e{name} &cуже занято.'
+  clan-no-permission-rank: '&cВаш ранг в клане не позволяет это действие.'
+  clan-only-leader-transfer: '&cТолько лидер может передать руководство кланом.'
+  clan-promoted-broadcast: '&a{player} &eповышен до ранга &e{rank}&e!'
+  clan-tag-taken: '&cТег клана &e{tag} &cуже занят.'
+  clan-target-already-in-clan: '&c{player} уже состоит в клане.'
+  clan-teleport-cancelled: '&cТелепортация отменена из-за движения или урона.'
+  clan-teleport-cooldown: '&cПодождите {time}с перед повторной телепортацией.'
+  clan-transferred-broadcast: '&6Руководство кланом передано от &e{old} &6к &e{new}&6!'
+  clan-unallied-broadcast: '&cСоюз с кланом &6{clan} &cрасторгнут.'
+  clan-unenemy-broadcast: '&aКлан &6{clan} &aбольше не является врагом.'
+  clan-war-cancelled: '&eВызов на войну отменён.'
+  clan-war-declared-received: '&4Клан &6{clan} &4объявил войну! Введите &c/clan war
+    accept&4.'
+  clan-war-declared-sent: '&cВызов на войну отправлен &6{clan}&c. Ожидание ответа...'
+  clan-war-declined-other: '&eКлан &6{clan} &eотклонил вызов на войну.'
+  clan-war-draw-global: '&e&lНИЧЬЯ! &7Война между &6{clan1} &7и &6{clan2} &7завершилась
+    вничью!'
+  clan-war-ended-global: '&4&lВОЙНА ЗАВЕРШЕНА! &6{winner} &aпобедил против &c{loser}
+    &7({score1} - {score2})!'
+  clan-war-kill-notify: '&c[ВОЙНА] &e{killer} &7уничтожил &e{victim}&7!'
+  clan-war-no-pending-offers: '&cОжидающих предложений о войне не найдено.'
+  clan-war-started-global: '&4&lВОЙНА КЛАНОВ! &6{clan1} &cпротив &6{clan2} &4началась!'
+  stock-commodity-bought: '&aКуплено &f%amount%x %item% &aза &f$%price%&a!'
+  stock-commodity-sold: '&aПродано &f%amount%x %item% &aза &f$%price%&a!'
+  stock-no-items: '&cВ инвентаре нет %item% для продажи!'
+  bounty-tracking: '&aКомпас наведён на цель: &e%target%&a!'
+  bounty-target-offline: '&cИгрок-цель сейчас не в сети!'
+gui:
+  clan:
+    main:
+      title: '&8ĞšĞ»Ğ°Ğ½: &6{clan}'
+  stock:
+    title: '&8&lБиржа Techno &7- &fРынок'
+    header-name: '&6&lБиржа & Товары'
+    header-lore1: '&7Рынок руд & корпоративных акций.'
+    header-lore2: '&eЦены меняются по спросу и предложению.'
+    price-label: Рыночная Цена
+    buy-click: 'ЛКМ: Купить 1 шт.'
+    buy-shift: 'Shift+ЛКМ: Купить 16 шт.'
+    sell-click: 'ПКМ: Продать 1 шт.'
+    sell-shift: 'Shift+ПКМ: Продать всё'
+    share-price: Цена Акции
+    available-shares: Доступно Акций
+    owned-shares: Ваши Акции
+    share-buy-1: 'ЛКМ: Купить 1 акцию'
+    share-buy-10: 'Shift+ЛКМ: Купить 10 акций'
+    share-sell-1: 'ПКМ: Продать 1 акцию'
+    share-sell-10: 'Shift+ПКМ: Продать 10 акций'
+    portfolio-name: '&a&lИнвестиционный Портфель'
+    portfolio-value: Стоимость Портфеля
+    portfolio-pl: Прибыль/Убыток
+    portfolio-click: Нажмите, чтобы увидеть отчёт в чате
+    close-name: '&c&lЗакрыть Меню'
+    refresh-name: '&e&lОбновить Рынок'
+    refresh-lore: Нажмите для обновления котировок
+  baltop:
+    podium-title: '&6&lБогатейшие Игроки &8- &eПодиум'
+    podium-header: '&6&lРейтинг Богатства'
+    podium-desc1: '&7Самые богатые игроки сервера на пьедестале.'
+    podium-desc2: '&eТоргуйте и развивайтесь, чтобы занять #1 место!'
+    balance-label: Баланс
+    first-place: 'Чемпион - #1 Самый Богатый Игрок'
+    second-place: 2 Место - Второе Место по Балансу
+    third-place: 3 Место - Третье Место по Балансу
+    empty-slot: Свободная Ступень
+    pedestal: Ступень Пьедестала
+    my-rank-title: '&e&lВаш Ранг'
+    your-rank: Ваш Ранг
+    your-balance: Ваш Баланс
+    total-tracked: Всего Игроков
+    unranked: Вне Рейтинга
+    all-rankings-name: '&a&lВесь Список'
+    all-rankings-lore1: '&7Полная таблица лидеров с пагинацией.'
+    all-rankings-lore2: '&eОтсортировано от высшего к низшему.'
+    close-name: '&c&lЗакрыть'
+    all-title: '&6&lВсе Балансы &8- &7Стр. %page%/%total%'
+    bank-label: Банк
+    clan-label: Клан
+    prev-page: '&e← Предыдущая'
+    back-podium-name: '&6&lНазад к Подиуму'
+    back-podium-lore: Вернуться к обзору пьедестала
+    next-page: '&eСледующая →'
+  admin:
+    title: '&c&lTechnoEconomy &8- &4Панель Администратора'
+    header-name: '&c&lКомандный Центр'
+    header-lore1: '&7Быстрый доступ ко всем системам плагина.'
+    header-lore2: '&eКликайте по предметам для выполнения или просмотра.'
+    cmd:
+      balance: Просмотр баланса кошелька.
+      pay: Безопасный перевод денег.
+      bank: Банковские счета и проценты.
+      baltop: Рейтинг богатейших и подиум.
+      check: Выписка и обналичивание чеков.
+      bounty: Доска охоты за головами.
+      market: Глобальный рынок по категориям.
+      shop: Динамический серверный магазин.
+      ah: Аукцион между игроками.
+      chestshop: Сундучные магазины на табличках.
+      sell: Быстрая продажа предметов.
+      worth: Оценка стоимости предметов.
+      stock: Финансовая биржа и акции.
+      company: Компании, сотрудники и налоги.
+      casino: Игровые автоматы и казино.
+      coinflip: Орёл или решка с шансом 50/50.
+      lottery: Серверная лотерея и билеты.
+      duel: Дуэли на деньги.
+      clan: Кланы, территории и войны.
+      clanadmin: Управление кланами для админов.
+      daily: Ежедневные награды.
+      payday: Почасовая зарплата.
+      jobs: Профессии и заработок.
+      hud: Настройки интерфейса HUD.
+      eco-give: Выдать деньги игроку.
+      eco-take: Забрать деньги у игрока.
+      eco-set: Установить точный баланс.
+      eco-reset: Сбросить баланс до начального.
+    action:
+      click-view: Нажмите для выполнения
+      command-only: Синтаксис команды показан выше
+      click-open: Нажмите для открытия меню
+      admin-only: Команда для администратора
+    reload-name: '&a&lПерезагрузить Плагин'
+    reload-lore: Перезагружает конфиги, меню и языковые файлы
+    backup-name: '&e&lСоздать Резервную Копию'
+    backup-lore: Создаёт полный снимок базы данных
+    close-name: '&c&lЗакрыть'
+    license-name: '&b&lПроверка Лицензии'
+    license-lore: Просмотреть информацию о лицензии
+  bounty:
+    title: '&c&lНаграды за Голову &8- &7Стр. %page%/%total%'
+    header-name: '&c&lДоска Разыскиваемых'
+    header-lore1: '&7Устраняйте разыскиваемых, чтобы получить награду.'
+    header-lore2: '&eКликните на голову для наведения компаса.'
+    empty-title: '&7Нет Наград'
+    empty-desc: Сейчас ни за кого не назначена награда.
+    reward-label: Награда
+    status-label: Статус Цели
+    click-track: Кликните для наведения компаса!
+    prev-page: '&e← Предыдущая'
+    place-name: '&a&lНазначить Награду'
+    place-lore1: '&7Команда для назначения награды:'
+    place-lore2: '&e/bounty <игрок> <сумма>'
+    close-name: '&c&lЗакрыть'
+    refresh-name: '&e&lОбновить'
+    refresh-lore: Обновить список разыскиваемых
+    next-page: '&eСледующая →'

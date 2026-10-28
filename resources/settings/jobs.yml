@@ -1,0 +1,146 @@
+# ==[ TECHNOECONOMYPLUS - JOBS SETTINGS ]=====
+# EN: Configuration file for server professions and rewards. Players can choose a profession via /jobs or GUI.
+# TR: Sunucu meslekleri ve ödülleri yapılandırma dosyası. Oyuncular /jobs veya menüden meslek seçebilir.
+# FR: Fichier de configuration des métiers et récompenses. Les joueurs peuvent choisir un métier via /jobs ou l'interface.
+# DE: Konfigurationsdatei für Berufe und Belohnungen. Spieler können Berufe über /jobs oder das GUI auswählen.
+
+jobs:
+  # ==[ MINER PROFESSION ]=====
+  # EN: Miners earn money by excavating ores and stones in survival worlds.
+  # TR: Madenciler hayatta kalma dünyalarında cevher ve taş kazarak para kazanır.
+  # FR: Les mineurs gagnent de l'argent en extrayant des minerais et des pierres.
+  # DE: Bergleute verdienen Geld durch das Abbauen von Erzen und Steinen.
+  miner:
+    # EN: GUI display icon / TR: Menü gösterim simgesi / FR: Icône de l'interface / DE: GUI-Anzeige-Icon
+    icon: DIAMOND_PICKAXE
+    # EN: Display name shown to players / TR: Oyunculara gösterilen isim / FR: Nom affiché aux joueurs / DE: Angezeigter Name
+    display-name: "Miner"
+    # EN: Monetary payout received per broken block / TR: Kırılan blok başına verilen para miktarı / FR: Récompense monétaire par bloc miné / DE: Belohnung pro abgebautem Block
+    block-rewards:
+      COAL_ORE: 0.5
+      DEEPSLATE_COAL_ORE: 0.5
+      IRON_ORE: 1.0
+      DEEPSLATE_IRON_ORE: 1.0
+      GOLD_ORE: 2.0
+      DEEPSLATE_GOLD_ORE: 2.0
+      DIAMOND_ORE: 5.0
+      DEEPSLATE_DIAMOND_ORE: 5.0
+      EMERALD_ORE: 4.0
+      DEEPSLATE_EMERALD_ORE: 4.0
+      ANCIENT_DEBRIS: 20.0
+      STONE: 0.05
+      DEEPSLATE: 0.05
+      COBBLESTONE: 0.02
+      GRANITE: 0.02
+      DIORITE: 0.02
+      ANDESITE: 0.02
+      LAPIS_ORE: 1.5
+      DEEPSLATE_LAPIS_ORE: 1.5
+      REDSTONE_ORE: 0.8
+      DEEPSLATE_REDSTONE_ORE: 0.8
+      COPPER_ORE: 0.6
+      DEEPSLATE_COPPER_ORE: 0.6
+      NETHER_QUARTZ_ORE: 0.5
+      NETHER_GOLD_ORE: 1.0
+
+  # ==[ FARMER PROFESSION ]=====
+  # EN: Farmers earn money by harvesting ripe crops and agricultural resources.
+  # TR: Çiftçiler olgunlaşmış tarım ürünlerini ve bitkileri hasat ederek para kazanır.
+  # FR: Les fermiers gagnent de l'argent en récoltant des cultures et des plantes.
+  # DE: Bauern verdienen Geld durch die Ernte von reifen Feldfrüchten und Pflanzen.
+  farmer:
+    # EN: GUI display icon / TR: Menü gösterim simgesi / FR: Icône de l'interface / DE: GUI-Anzeige-Icon
+    icon: HOE
+    # EN: Display name shown to players / TR: Oyunculara gösterilen isim / FR: Nom affiché aux joueurs / DE: Angezeigter Name
+    display-name: "Farmer"
+    # EN: Monetary payout received per harvested crop / TR: Hasat edilen tarım ürünü başına para / FR: Récompense monétaire par récolte / DE: Belohnung pro geernteter Feldfrucht
+    block-rewards:
+      WHEAT: 0.5
+      CARROTS: 0.5
+      POTATOES: 0.5
+      BEETROOTS: 0.5
+      MELON: 0.8
+      PUMPKIN: 0.8
+      SUGAR_CANE: 0.2
+      BAMBOO: 0.1
+      CACTUS: 0.1
+      NETHER_WART: 0.3
+      COCOA: 0.3
+      SWEET_BERRY_BUSH: 0.4
+
+  # ==[ HUNTER PROFESSION ]=====
+  # EN: Hunters earn money by slaying hostile monsters and bosses.
+  # TR: Avcılar düşman yaratıkları ve bossları alt ederek para kazanır.
+  # FR: Les chasseurs gagnent de l'argent en éliminant monstres et boss.
+  # DE: Jäger verdienen Geld durch das Erlegen feindlicher Monster und Bosse.
+  hunter:
+    # EN: GUI display icon / TR: Menü gösterim simgesi / FR: Icône de l'interface / DE: GUI-Anzeige-Icon
+    icon: BOW
+    # EN: Display name shown to players / TR: Oyunculara gösterilen isim / FR: Nom affiché aux joueurs / DE: Angezeigter Name
+    display-name: "Hunter"
+    # EN: Monetary payout received per slain entity / TR: Öldürülen yaratık başına verilen para / FR: Récompense monétaire par créature tuée / DE: Belohnung pro getöteter Kreatur
+    entity-rewards:
+      ZOMBIE: 1.5
+      SKELETON: 1.5
+      SPIDER: 1.0
+      CREEPER: 2.0
+      ENDERMAN: 3.0
+      BLAZE: 4.0
+      WITCH: 3.0
+      PILLAGER: 2.5
+      EVOKER: 8.0
+      WITHER_SKELETON: 5.0
+      GUARDIAN: 3.0
+      ELDER_GUARDIAN: 15.0
+      SHULKER: 5.0
+      PIGLIN: 1.0
+      HOGLIN: 2.0
+      PHANTOM: 2.0
+      DROWNED: 1.5
+      HUSK: 1.5
+      STRAY: 1.5
+      VINDICATOR: 3.0
+      RAVAGER: 10.0
+      WITHER: 50.0
+      ENDER_DRAGON: 100.0
+      SILVERFISH: 0.3
+      CAVE_SPIDER: 1.2
+      ENDERMITE: 0.3
+      GHAST: 3.0
+      MAGMA_CUBE: 1.5
+      SLIME: 0.5
+      VEX: 2.0
+      ZOMBIE_VILLAGER: 1.5
+      ZOMBIE_PIGLIN: 1.5
+      BOGGED: 1.5
+      BREEZE: 5.0
+
+  # ==[ BUILDER PROFESSION ]=====
+  # EN: Builders earn a base payout every time they place decorative or construction blocks.
+  # TR: İnşaatçılar yapı veya dekoratif blok yerleştirdiklerinde para kazanır.
+  # FR: Les bâtisseurs reçoivent une récompense en plaçant des blocs de construction.
+  # DE: Baumeister verdienen Geld beim Platzieren von Bau- und Dekorationsblöcken.
+  builder:
+    # EN: GUI display icon / TR: Menü gösterim simgesi / FR: Icône de l'interface / DE: GUI-Anzeige-Icon
+    icon: BRICKS
+    # EN: Display name shown to players / TR: Oyunculara gösterilen isim / FR: Nom affiché aux joueurs / DE: Angezeigter Name
+    display-name: "Builder"
+    # EN: Fixed monetary payout per placed block / TR: Yerleştirilen her blok başına para miktarı / FR: Récompense fixe par bloc posé / DE: Feste Belohnung pro platziertem Block
+    place-reward: 0.05
+
+  # ==[ FISHERMAN PROFESSION ]=====
+  # EN: Fishermen earn payouts whenever they catch fish or aquatic treasures.
+  # TR: Balıkçılar balık veya su altı ganimeti tuttuklarında para kazanır.
+  # FR: Les pêcheurs sont récompensés lorsqu'ils attrapent du poisson ou des trésors.
+  # DE: Angler erhalten Belohnungen beim Fangen von Fischen oder Unterwasserschätzen.
+  fisherman:
+    # EN: GUI display icon / TR: Menü gösterim simgesi / FR: Icône de l'interface / DE: GUI-Anzeige-Icon
+    icon: FISHING_ROD
+    # EN: Display name shown to players / TR: Oyunculara gösterilen isim / FR: Nom affiché aux joueurs / DE: Angezeigter Name
+    display-name: "Fisherman"
+    # EN: Monetary payout received per caught fish / TR: Yakalanan balık başına para / FR: Récompense par poisson pêché / DE: Belohnung pro gefangenem Fisch
+    catch-rewards:
+      COD: 0.5
+      SALMON: 0.8
+      TROPICAL_FISH: 1.0
+      PUFFERFISH: 1.2

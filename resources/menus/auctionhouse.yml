@@ -1,0 +1,101 @@
+# ==[ TECHNOECONOMYPLUS - AUCTION HOUSE MENU ]=====
+# EN: Configuration file for the Auction House interface.
+# EN: All display titles, button slots, materials, and lores can be customized here.
+# TR: Açık Artırma arayüzü için yapılandırma dosyası.
+# TR: Başlıklar, buton slotları, materyaller ve açıklamalar buradan düzenlenebilir.
+# FR: Fichier de configuration façon pour l'interface de l'Hôtel des Ventes.
+# DE: Konfigurationsdatei im für das Auktionshaus.
+
+menu_title: "&8Auction House - Page {page}"
+size: 54
+
+items:
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [45, 46, 47, 48, 49, 50, 51, 52, 53]
+
+  empty_slot:
+    material: GRAY_STAINED_GLASS_PANE
+    display_name: " "
+
+  previous_page:
+    slot: 45
+    material: ARROW
+    display_name: "&e< Previous Page"
+    lore:
+      - "&7Click to view the previous page."
+
+  my_listings:
+    slot: 47
+    material: CHEST
+    display_name: "&eMy Listings"
+    lore:
+      - "&7View and manage your active listings."
+      - "&7Click to inspect."
+
+  close:
+    slot: 49
+    material: BARRIER
+    display_name: "&cClose"
+    lore:
+      - "&7Click to close the auction house."
+
+  how_to_sell:
+    slot: 51
+    material: GOLD_INGOT
+    display_name: "&aHow to List?"
+    lore:
+      - "&7Hold an item in hand and run:"
+      - "&e/ah sell <price>"
+
+  next_page:
+    slot: 53
+    material: ARROW
+    display_name: "&eNext Page >"
+    lore:
+      - "&7Click to view the next page."
+
+listing_item:
+  seller_line: "&7Seller: &f{seller}"
+  price_line: "&7Price: &a{symbol}{price}"
+  time_left_line: "&7Time Left: &e{time}"
+  left_click_buy: "&eLeft-Click to buy!"
+  right_click_cancel: "&cRight-Click to cancel and reclaim item!"
+
+confirm_menu:
+  menu_title: "&8Purchase Confirmation"
+  size: 27
+  confirm_button:
+    slot: 11
+    material: LIME_WOOL
+    display_name: "&aConfirm Purchase"
+    lore:
+      - "&7Price: &a{symbol}{price}"
+      - ""
+      - "&eClick to confirm!"
+  insufficient_funds_button:
+    slot: 11
+    material: RED_WOOL
+    display_name: "&cInsufficient Funds"
+    lore:
+      - "&7Required: &a{symbol}{price}"
+      - "&7Your Balance: &c{symbol}{balance}"
+      - ""
+      - "&cYou cannot afford this item!"
+  cancel_button:
+    slot: 15
+    material: RED_WOOL
+    display_name: "&cCancel"
+    lore:
+      - "&7Cancel and return."
+
+my_listings_menu:
+  menu_title: "&8My Listings - Page {page}"
+  size: 54
+  back_button:
+    slot: 49
+    material: BOOK
+    display_name: "&eBack to All Listings"
+    lore:
+      - "&7Click to return to all listings."

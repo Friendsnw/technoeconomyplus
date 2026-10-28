@@ -1,0 +1,79 @@
+# ==[ TECHNOECONOMYPLUS - DUEL & WAGER MENU ]=====
+# EN: DeluxeMenus-style interface for PvP combat wagers, coinflip duels, and wager statistics.
+# EN: Winner takes the wager pool minus any tax commission configured in config.yml.
+# TR: PvP savaş bahisleri, yazı-tura düelloları ve bahis istatistikleri için DeluxeMenus arayüzü.
+# TR: Kazanan taraf config.yml'de ayarlanan vergi komisyonu düşüldükten sonra tüm bahsi alır.
+# FR: Interface DeluxeMenus pour les paris PvP, duels à pile ou face et statistiques de combat.
+# FR: Le vainqueur remporte l'ensemble de la mise moins la commission configurée dans config.yml.
+# DE: DeluxeMenus-Interface für PvP-Einsätze, Münzwurf-Duelle und Kampfstatistiken.
+# DE: Der Gewinner erhält den gesamten Topf abzüglich der in config.yml festgelegten Steuerprovision.
+
+# EN: Title displayed at the top of the GUI inventory / TR: Menü başlığı / FR: Titre du menu / DE: Menütitel
+menu_title: "&8&lDuels &7- &fWager Arena"
+
+# EN: Inventory size in slots (multiple of 9: 9, 18, 27, 36, 45, 54) / TR: Envanter boyutu / FR: Taille de l'inventaire / DE: Inventargröße
+size: 36
+
+items:
+  # ==[ BACKGROUND FILLER ]=====
+  # EN: Decorative border pane / TR: Dekoratif çerçeve camı / FR: Vitre décorative de bordure / DE: Dekorative Randglasscheibe
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [0,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,35]
+
+  # ==[ HEADER / OVERVIEW ]=====
+  # EN: Overview banner for wager duels / TR: Bahisli düello tanıtım başlığı / FR: Bannière d'arène de duels / DE: Übersichtsbanner für Wetteinsatz-Duelle
+  header:
+    material: DIAMOND_SWORD
+    display_name: "&c&lWager Arena"
+    lore:
+      - "&7High-stakes 1v1 battle arena."
+      - "&7Winner takes the total wagered jackpot!"
+    slot: 4
+
+  # ==[ SEND CHALLENGE ]=====
+  # EN: Guide or command prompt to challenge an opponent / TR: Rakibe meydan okuma rehberi / FR: Guide pour défier un adversaire / DE: Anleitung zum Herausfordern eines Gegners
+  challenge:
+    material: IRON_SWORD
+    display_name: "&e&lSend Duel Challenge"
+    lore:
+      - "&7Challenge a player to a duel:"
+      - "&7/duel <player> <amount> [pvp|coinflip]"
+    slot: 11
+    click_commands:
+      - "[message] &eType /duel <player> <amount> [pvp|coinflip] to challenge an opponent."
+
+  # ==[ ACCEPT CHALLENGE ]=====
+  # EN: Guide or command prompt to accept a pending wager challenge / TR: Gelen düello teklifini kabul etme rehberi / FR: Guide pour accepter un défi en attente / DE: Anleitung zum Annehmen einer Duell-Herausforderung
+  accept:
+    material: LIME_DYE
+    display_name: "&a&lAccept Duel"
+    lore:
+      - "&7Accept an incoming duel invite:"
+      - "&7/duel accept <player>"
+    slot: 13
+    click_commands:
+      - "[message] &eType /duel accept <player> to accept the battle."
+
+  # ==[ DUEL STATISTICS ]=====
+  # EN: Player duel track record and net profit / TR: Oyuncunun düello istatistikleri ve net kazancı / FR: Bilan des duels et gains nets du joueur / DE: Duell-Erfolgsbilanz und Nettogewinn des Spielers
+  stats:
+    material: GOLDEN_SWORD
+    display_name: "&6&lCombat Records"
+    lore:
+      - "&7Victories: &a%technoeconomy_duel_wins%"
+      - "&7Defeats: &c%technoeconomy_duel_losses%"
+      - "&7Net Winnings: &e%technoeconomy_duel_winnings%"
+    slot: 15
+    click_commands:
+      - "[player] duel stats"
+
+  # ==[ CLOSE BUTTON ]=====
+  # EN: Closes the duel inventory / TR: Menüyü kapatır / FR: Ferme l'inventaire / DE: Schließt das Inventar
+  close:
+    material: BARRIER
+    display_name: "&c&lClose"
+    slot: 31
+    click_commands:
+      - "[close]"

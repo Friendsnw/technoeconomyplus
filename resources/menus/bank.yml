@@ -1,0 +1,79 @@
+# ==[ TECHNOECONOMYPLUS - BANK MENU ]=====
+# EN: DeluxeMenus-style configuration file for the player personal banking interface.
+# EN: Supports click commands ([player], [console], [message], [close]) and PlaceholderAPI.
+# TR: Oyuncu kişisel banka arayüzü için DeluxeMenus tarzı yapılandırma dosyası.
+# TR: Tıklama komutlarını ([player], [console], [message], [close]) ve PlaceholderAPI'yi destekler.
+# FR: Fichier de configuration façon DeluxeMenus pour l'interface bancaire personnelle des joueurs.
+# FR: Prend en charge les commandes de clic ([player], [console], [message], [close]) et PlaceholderAPI.
+# DE: Konfigurationsdatei im DeluxeMenus-Stil für die persönliche Bank-Benutzeroberfläche der Spieler.
+# DE: Unterstützt Klick-Befehle ([player], [console], [message], [close]) und PlaceholderAPI.
+
+# EN: Title displayed at the top of the GUI inventory / TR: Menü envanterinin üstünde görünen başlık / FR: Titre affiché en haut de l'inventaire / DE: Oben im GUI-Inventar angezeigter Titel
+menu_title: "&8&lBank &7- &fPersonal Account"
+
+# EN: Inventory size in slots (must be a multiple of 9: 9, 18, 27, 36, 45, 54) / TR: Slot cinsinden envanter boyutu (9'un katı olmalıdır: 9, 18, 27, 36, 45, 54) / FR: Taille de l'inventaire en cases (multiple de 9 : 9, 18, 27, 36, 45, 54) / DE: Inventargröße in Slots (muss ein Vielfaches von 9 sein: 9, 18, 27, 36, 45, 54)
+size: 36
+
+items:
+  # ==[ BACKGROUND FILLER ]=====
+  # EN: Decorative border pane / TR: Dekoratif çerçeve paneli / FR: Vitre décorative de bordure / DE: Dekorative Randglasscheibe
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [0,1,2,3,4,5,6,7,8,27,28,29,30,31,32,33,34,35]
+
+  # ==[ HEADER / BALANCE ITEM ]=====
+  # EN: Shows the player's current bank account balance / TR: Oyuncunun güncel banka hesabındaki bakiyeyi gösterir / FR: Affiche le solde bancaire actuel du joueur / DE: Zeigt den aktuellen Bankkontostand des Spielers
+  header:
+    material: GOLD_BLOCK
+    display_name: "&6&lPersonal Bank Account"
+    lore:
+      - "&7Bank Balance: &f%technoeconomy_bank_balance_formatted%"
+    slot: 4
+
+  # ==[ DEPOSIT OPTION ]=====
+  # EN: Click to enter deposit amount via sign GUI / TR: Tabela üzerinden para yatırma miktarını girmek için tıklayın / FR: Cliquer pour saisir le montant à déposer / DE: Klicken für Einzahlbetrag auf Schild
+  deposit:
+    material: CHEST
+    display_name: "&e&lDeposit Money"
+    lore:
+      - "&7Deposit money into your bank."
+      - ""
+      - "&eClick to enter amount!"
+    slot: 11
+    click_commands:
+      - "[bank_deposit]"
+
+  # ==[ WITHDRAW OPTION ]=====
+  # EN: Click to enter withdrawal amount via sign GUI / TR: Tabela üzerinden para çekme miktarını girmek için tıklayın / FR: Cliquer pour saisir le montant à retirer / DE: Klicken für Abhebebetrag auf Schild
+  withdraw:
+    material: ENDER_CHEST
+    display_name: "&a&lWithdraw Money"
+    lore:
+      - "&7Withdraw money from your bank."
+      - ""
+      - "&eClick to enter amount!"
+    slot: 13
+    click_commands:
+      - "[bank_withdraw]"
+
+  # ==[ INTEREST STATS ]=====
+  # EN: Displays pending bank interest rate and countdown / TR: Bekleyen banka faiz oranını ve geri sayımını gösterir / FR: Affiche le taux d'intérêt bancaire et le compte à rebours / DE: Zeigt den ausstehenden Zinssatz und den Countdown
+  interest:
+    material: EXPERIENCE_BOTTLE
+    display_name: "&b&lInterest Information"
+    lore:
+      - "&7View bank interest countdown:"
+      - "&7/bank interest"
+    slot: 15
+    click_commands:
+      - "[player] bank interest"
+
+  # ==[ CLOSE BUTTON ]=====
+  # EN: Closes the active bank inventory / TR: Açık olan banka menüsünü kapatır / FR: Ferme l'inventaire bancaire actif / DE: Schließt das aktive Bank-Inventar
+  close:
+    material: BARRIER
+    display_name: "&c&lClose"
+    slot: 31
+    click_commands:
+      - "[close]"

@@ -1,0 +1,55 @@
+# ==[ TECHNOECONOMYPLUS - DAILY REWARDS MENU ]=====
+# EN: DeluxeMenus-style interface for claiming daily login streaks and monetary rewards.
+# EN: Rewards increase dynamically as players maintain consecutive daily login streaks.
+# TR: Günlük giriş serisi ve para ödüllerini almak için DeluxeMenus arayüzü.
+# TR: Oyuncular üst üste giriş yaptıkça ödüller dinamik olarak katlanarak artar.
+# FR: Interface DeluxeMenus pour réclamer les séries de connexion quotidiennes et les récompenses.
+# FR: Les récompenses augmentent à mesure que les joueurs maintiennent leurs connexions consécutives.
+# DE: DeluxeMenus-Interface zum Abholen von täglichen Login-Belohnungen und Serienboni.
+# DE: Belohnungen steigen dynamisch, wenn Spieler ununterbrochene tägliche Serien aufrechterhalten.
+
+# EN: Title displayed at the top of the GUI inventory / TR: Menü başlığı / FR: Titre du menu / DE: Menütitel
+menu_title: "&8&lDaily Rewards &7- &fLogin Bonus"
+
+# EN: Inventory size in slots (multiple of 9: 9, 18, 27, 36, 45, 54) / TR: Envanter boyutu / FR: Taille de l'inventaire / DE: Inventargröße
+size: 27
+
+items:
+  # ==[ BACKGROUND FILLER ]=====
+  # EN: Decorative border pane / TR: Dekoratif çerçeve camı / FR: Vitre décorative de bordure / DE: Dekorative Randglasscheibe
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [0,1,2,3,4,5,6,7,8,18,19,20,21,22,23,24,25,26]
+
+  # ==[ HEADER / OVERVIEW ]=====
+  # EN: Overview banner for daily rewards / TR: Günlük ödül tanıtım başlığı / FR: Bannière de présentation des récompenses / DE: Übersichtsbanner für tägliche Belohnungen
+  header:
+    material: SUNFLOWER
+    display_name: "&e&lDaily Login Streak"
+    lore:
+      - "&7Log in every day to claim cash rewards."
+      - "&7Keep your streak going for higher multiplier bonuses!"
+    slot: 4
+
+  # ==[ CLAIM ACTION BUTTON ]=====
+  # EN: Claims the current daily login reward and updates player streak counter / TR: Günlük ödülü alır ve oyuncunun seri sayacını günceller / FR: Réclame la récompense quotidienne et met à jour le compteur de série / DE: Holt die Belohnung ab und aktualisiert den Serienzähler
+  claim:
+    material: CHEST
+    display_name: "&a&lClaim Daily Reward"
+    lore:
+      - "&7Click to collect today's cash bonus."
+      - ""
+      - "&eClick to claim!"
+    slot: 13
+    click_commands:
+      - "[player] daily"
+
+  # ==[ CLOSE BUTTON ]=====
+  # EN: Closes the daily rewards inventory / TR: Menüyü kapatır / FR: Ferme l'inventaire / DE: Schließt das Inventar
+  close:
+    material: BARRIER
+    display_name: "&c&lClose"
+    slot: 22
+    click_commands:
+      - "[close]"

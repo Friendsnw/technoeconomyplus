@@ -1,0 +1,74 @@
+# ==[ TECHNOECONOMYPLUS - STOCK EXCHANGE & MARKET MENU ]=====
+# EN: DeluxeMenus-style interface for live commodity market rates, corporate equity shares, and investment portfolios.
+# EN: Prices dynamically fluctuate based on market transactions and enterprise evaluations.
+# TR: Canlı emtia piyasası kurları, şirket hisse senetleri ve yatırım portföyü için DeluxeMenus arayüzü.
+# TR: Fiyatlar piyasa işlemlerine ve şirket değerlemelerine bağlı olarak dinamik dalgalanır.
+# FR: Interface DeluxeMenus pour les cours des matières premières, actions d'entreprises et portefeuilles d'investissement.
+# FR: Les prix fluctuent dynamiquement selon les transactions de marché et les valorisations d'entreprises.
+# DE: DeluxeMenus-Interface für Rohstoffkurse, Unternehmensaktien und Anlageportfolios.
+# DE: Die Preise schwanken dynamisch basierend auf Markttransaktionen und Unternehmensbewertungen.
+
+# EN: Title displayed at the top of the GUI inventory / TR: Menü başlığı / FR: Titre du menu / DE: Menütitel
+menu_title: "&8&lStock Exchange &7- &fLive Market"
+
+# EN: Inventory size in slots (multiple of 9: 9, 18, 27, 36, 45, 54) / TR: Envanter boyutu / FR: Taille de l'inventaire / DE: Inventargröße
+size: 54
+
+items:
+  # ==[ BACKGROUND FILLER ]=====
+  # EN: Decorative border pane / TR: Dekoratif çerçeve camı / FR: Vitre décorative de bordure / DE: Dekorative Randglasscheibe
+  background:
+    material: BLACK_STAINED_GLASS_PANE
+    display_name: " "
+    slots: [0,1,2,3,4,5,6,7,8,45,46,47,48,49,50,51,52,53]
+
+  # ==[ HEADER / OVERVIEW ]=====
+  # EN: Stock market exchange overview / TR: Borsa piyasa genel görünümü / FR: Vue d'ensemble de la bourse / DE: Börsen-Marktübersicht
+  header:
+    material: GOLD_INGOT
+    display_name: "&6&lTechno Stock Exchange"
+    lore:
+      - "&7Market commodity rates update in real time."
+      - "&7Trade corporate shares and track investment yields."
+    slot: 4
+
+  # ==[ DIAMOND COMMODITY RATE ]=====
+  # EN: Live diamond price index / TR: Canlı elmas piyasa endeksi / FR: Indice du cours du diamant en direct / DE: Live-Diamanten-Preisindex
+  diamond_price:
+    material: DIAMOND
+    display_name: "&b&lDiamond Index"
+    lore:
+      - "&7Current Market Price: &f%technoeconomy_stock_diamond%"
+    slot: 10
+
+  # ==[ GOLD COMMODITY RATE ]=====
+  # EN: Live gold price index / TR: Canlı altın piyasa endeksi / FR: Indice du cours de l'or en direct / DE: Live-Gold-Preisindex
+  gold_price:
+    material: GOLD_INGOT
+    display_name: "&6&lGold Index"
+    lore:
+      - "&7Current Market Price: &f%technoeconomy_stock_gold%"
+    slot: 11
+
+  # ==[ INVESTMENT PORTFOLIO ]=====
+  # EN: Personal investment portfolio valuation and profit/loss statement / TR: Kişisel yatırım portföy değeri ve kar/zarar durumu / FR: Valorisation du portefeuille et état des gains/pertes / DE: Bewertung des Anlageportfolios und Gewinn-/Verlustübersicht
+  portfolio:
+    material: BOOK
+    display_name: "&a&lInvestment Portfolio"
+    lore:
+      - "&7Portfolio Value: &f%technoeconomy_stock_portfolio_value%"
+      - "&7Net Profit/Loss: &f%technoeconomy_stock_profit_loss%"
+      - ""
+      - "&eUse commands to trade equity shares:"
+      - "&7/stock buy <company> <shares>"
+      - "&7/stock sell <company> <shares>"
+    slot: 22
+
+  # ==[ CLOSE BUTTON ]=====
+  # EN: Closes the stock exchange inventory / TR: Menüyü kapatır / FR: Ferme l'inventaire / DE: Schließt das Inventar
+  close:
+    material: BARRIER
+    display_name: "&c&lClose"
+    slot: 49
+    click_commands:
+      - "[close]"

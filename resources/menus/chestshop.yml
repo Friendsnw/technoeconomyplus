@@ -1,0 +1,129 @@
+# ==[ TECHNOECONOMYPLUS - CHEST SHOP MENU ]=====
+# EN: DeluxeMenus-style configuration file for Chest Shops.
+# EN: Browse, administration, confirmation, and item addition menus can be customized here.
+# TR: Sandık Marketi için DeluxeMenus tarzı yapılandırma dosyası.
+# TR: İnceleme, yönetim, onay ve ürün ekleme menüleri buradan özelleştirilebilir.
+# FR: Fichier de configuration façon DeluxeMenus pour les boutiques de coffre.
+# DE: Konfigurationsdatei im DeluxeMenus-Stil für Kisten-Shops.
+
+shop_menu:
+  menu_title: "&8Shop: {shop_name}"
+  size: 27
+  background:
+    material: BLUE_STAINED_GLASS_PANE
+  empty_slot:
+    material: LIGHT_BLUE_STAINED_GLASS_PANE
+  previous_button:
+    slot: 9
+    material: PLAYER_HEAD
+    display_name: "&e< Previous"
+  next_button:
+    slot: 17
+    material: PLAYER_HEAD
+    display_name: "&eNext >"
+  close_button:
+    slot: 22
+    material: BARRIER
+    display_name: "&cClose"
+
+admin_menu:
+  menu_title: "&8Shop Management: {shop_name}"
+  size: 54
+  background:
+    material: GRAY_STAINED_GLASS_PANE
+  info_button:
+    slot: 4
+    material: BOOK
+    display_name: "&6Shop Info"
+    lore:
+      - "&7Owner: &f{owner}"
+      - "&7Location: &f{location}"
+      - "&7Total Stock: &a{stock}"
+      - "&7Total Products: &b{products}"
+  add_product_button:
+    slot: 19
+    material: LIME_DYE
+    display_name: "&aAdd Product"
+    lore:
+      - "&7Add a new product"
+      - "&7to this chest shop."
+      - ""
+      - "&eClick!"
+  delete_shop_button:
+    slot: 25
+    material: TNT
+    display_name: "&cDelete Shop"
+    lore:
+      - "&7Permanently removes this shop."
+      - ""
+      - "&cClick to delete!"
+  close_button:
+    slot: 49
+    material: BARRIER
+    display_name: "&cClose"
+
+confirm_menu:
+  menu_title: "&8Purchase Confirmation"
+  size: 27
+  confirm_button:
+    slot: 11
+    material: LIME_WOOL
+    display_name: "&aConfirm Purchase"
+    lore:
+      - "&7Price: &a{symbol}{price}"
+      - "&7Stock Left: &f{stock}"
+      - ""
+      - "&eClick to buy!"
+  insufficient_funds_button:
+    slot: 11
+    material: RED_WOOL
+    display_name: "&cInsufficient Funds"
+    lore:
+      - "&7Required: &a{symbol}{price}"
+      - "&7Your Balance: &c{symbol}{balance}"
+      - ""
+      - "&cYou do not have enough funds!"
+  out_of_stock_button:
+    slot: 11
+    material: RED_WOOL
+    display_name: "&cOut of Stock"
+    lore:
+      - "&7This product is out of stock."
+  cancel_button:
+    slot: 15
+    material: RED_WOOL
+    display_name: "&cCancel"
+    lore:
+      - "&7Cancel and return."
+
+add_product_menu:
+  menu_title: "&8Add Product"
+  size: 27
+  info_button:
+    slot: 4
+    material: HOPPER
+    display_name: "&ePlace Item in Center Slot"
+    lore:
+      - "&7Put the item you want to sell"
+      - "&7into the empty center slot."
+      - "&7Placed quantity will be initial stock."
+  confirm_button:
+    slot: 15
+    material: LIME_CONCRETE
+    display_name: "&aSet Price & Save"
+    lore:
+      - "&7Click here after placing"
+      - "&7the item to enter price."
+  cancel_button:
+    slot: 11
+    material: BARRIER
+    display_name: "&cCancel"
+
+product_display:
+  price_line: "&7Price: &a{symbol}{price}"
+  stock_line: "&7Stock: &f{stock}"
+  seller_line: "&7Seller: &f{owner}"
+  out_of_stock_line: "&cOut of stock!"
+  admin_remove_line: "&6Right-Click: Remove Product"
+  admin_price_line: "&eMiddle-Click: Change Price"
+  buyer_click_line: "&eClick: Purchase"
