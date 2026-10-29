@@ -3,6 +3,9 @@
 A completely free economy ecosystem for your Minecraft server, consisting of over 20 modules.
 All modules, features, languages, functions, placeholders and for developer informations are here.
 
+# Copyright
+TechnoEconomyPlus is entirely open-source. This means you are free to examine its source code and report any bugs you may find. However, it does not grant you the right to redistribute this plugin on any platform of your choosing, nor does it permit its use on a server with an average player count exceeding 10.
+
 For easy start, please visit [our wiki](https://wiki.teknodev.qzz.io/v1/getting-started?plugin=technoeconomyplus)
 
 # FEATURES
